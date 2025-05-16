@@ -16,6 +16,7 @@
     "clean": "rimraf node_modules"
   },
   "devDependencies": {
+    "@theojs/lumen": "^5.4.2",
     "@types/animejs": "^3.1.13",
     "animejs": "3.2.2",
     "busuanzi.pure.js": "^1.0.3",

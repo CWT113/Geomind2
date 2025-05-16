@@ -18,4 +18,15 @@ export const sidebar = {
       ],
     },
   ],
+
+  "/gis/cesium/": [
+    {
+      text: "基础篇",
+      items: [
+        { text: "基础使用", link: "/gis/cesium/基础使用.md" },
+        { text: "坐标系统", link: "/gis/cesium/坐标系统.md" },
+        { text: "飞行视角", link: "/gis/cesium/飞行视角.md" },
+      ],
+    },
+  ],
 };

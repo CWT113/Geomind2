@@ -15,5 +15,20 @@ export const nav = [
     ],
   },
 
+  {
+    text: "GIS",
+    items: [
+      {
+        text: "三维地图",
+        items: [
+          {
+            text: "Cesium",
+            link: "/gis/cesium/基础使用.md",
+          },
+        ],
+      },
+    ],
+  },
+
   { text: "VitePress", link: "https://vitepress.dev/zh/", noIcon: false },
 ];
