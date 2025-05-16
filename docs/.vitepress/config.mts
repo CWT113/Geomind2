@@ -37,11 +37,14 @@ export default defineConfig({
   markdown: {
     math: true,
     lineNumbers: true,
+    theme: {
+      light: "github-light",
+      dark: "one-dark-pro"
+    },
     image: {
       lazyLoading: true
     },
     config: md => {
-      // md.use(timeline)
       md.use(groupIconMdPlugin) //代码组图标
 
       md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
@@ -58,8 +61,14 @@ export default defineConfig({
     returnToTopLabel: "返回顶部",
     logo: "/badminton-logo.png",
     darkModeSwitchLabel: "深浅模式",
-    outline: { level: [2, 6], label: "目录" },
-    docFooter: { prev: "上一篇", next: "下一篇" },
+    outline: { 
+      level: [2, 6], 
+      label: "目录" 
+    },
+    docFooter: { 
+      prev: "上一篇", 
+      next: "下一篇"
+    },
     editLink: {
       pattern: "https://github.com",
       text: "在 GitHub 编辑本页"
