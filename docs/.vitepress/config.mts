@@ -10,6 +10,7 @@ import {
 } from "vitepress-plugin-group-icons"
 
 export default defineConfig({
+  base: "/Geomind2/",
   lang: "zh-CN",
   title: "Geomind",
   description: "Salvation lies within.",
