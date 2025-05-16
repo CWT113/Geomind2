@@ -18,8 +18,6 @@ import { useRoute, inBrowser } from "vitepress"
 import { NProgress } from "nprogress-v2/dist/index.js"
 import "nprogress-v2/dist/index.css"
 import busuanzi from "busuanzi.pure.js"
-import { HomeFooter } from '@theojs/lumen'
-import { Footer_Data } from '../../settings/footerData.mts'
 
 export default {
   extends: DefaultTheme,
@@ -27,8 +25,7 @@ export default {
   Layout() {
     return h(DefaultTheme.Layout, null, {
       "doc-footer-before": () => h(BackToTop),
-      "layout-top": () => h(Fragment, null, [h(MouseClick), h(MouseFollower)]),
-      'layout-bottom': () => h(HomeFooter, { Footer_Data  }) 
+      "layout-top": () => h(Fragment, null, [h(MouseClick), h(MouseFollower)])
     })
   },
 

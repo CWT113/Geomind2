@@ -76,7 +76,7 @@ export default defineConfig({
       text: "在 GitHub 编辑本页",
     },
     lastUpdated: {
-      text: "最后更新于：",
+      text: "最后更新于",
       formatOptions: {
         dateStyle: "short",
         timeStyle: "medium",
@@ -92,6 +92,6 @@ export default defineConfig({
     socialLinks: socialLinks,
 
     // 使用自定义页脚插件
-    // footer: footer
+    footer: footer
   },
 });
