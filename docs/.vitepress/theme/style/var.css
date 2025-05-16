@@ -2,6 +2,8 @@
   --vp-c-bg: #fff;
   --vp-c-bg-alt: #f0f0f0;
 
+  --vp-button-brand-bg: var(--vp-c-brand-1);
+
   --scrollbar-color: #e0e3e6;
   --scrollbar-color-hover: #c1c7ce;
   --scrollbar-dark-color: #6e7883;
@@ -9,8 +11,10 @@
 }
 
 .dark {
-  /* --vp-c-bg: #050505;
-  --vp-c-bg-alt: #050505; */
+  --vp-c-bg: #161618;
+  --vp-c-bg-alt: #1b1b1f;
+
+  --vp-button-brand-bg: var(--vp-c-brand-1);
 }
 
 :root {
@@ -95,10 +99,12 @@
 
 /* 文字选中背景色 */
 :root ::selection {
-  background: #e8defd;
+  color: var(--vp-c-brand-1);
+  background-color: #e8defd;
 }
 .dark ::selection {
-  background: #382d53;
+  color: var(--vp-c-brand-1);
+  background-color: #382d53;
 }
 
 /* 代码块样式 */
