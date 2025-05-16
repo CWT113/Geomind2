@@ -1,5 +1,5 @@
 export const nav = [
-  { text: "首页", link: "/" },
+  { text: "导航", link: "/" },
 
   {
     text: "Java",
@@ -9,7 +9,7 @@ export const nav = [
         text: "SSM",
         items: [
           // { text: "Spring6", link: "" },
-          { text: "SpringMVC", link: "/backend/java/springmvc/MVC理论基础.md" },
+          { text: "SpringMVC", link: "/backend/Java/SpringMVC/MVC理论基础.md" },
         ],
       },
     ],
@@ -23,7 +23,7 @@ export const nav = [
         items: [
           {
             text: "Cesium",
-            link: "/gis/cesium/基础使用.md",
+            link: "/gis/Cesium/基础使用.md",
           },
         ],
       },
