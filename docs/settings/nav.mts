@@ -1,5 +1,5 @@
 export const nav = [
-  { text: "编程导航", link: "/navigation/index.md" },
+  { text: "导航", link: "/navigation/index.md" },
 
   {
     text: "Java",
@@ -8,7 +8,7 @@ export const nav = [
       {
         text: "SSM",
         items: [
-          // { text: "Spring6", link: "" },
+          { text: "Spring", link: "/backend/Java/Spring/Spring简介.md" },
           { text: "SpringMVC", link: "/backend/Java/SpringMVC/MVC理论基础.md" }
         ]
       }
@@ -30,5 +30,5 @@ export const nav = [
     ]
   },
 
-  { text: "VitePress", link: "https://vitepress.dev/zh/", noIcon: false }
+  { text: "听首歌", link: "https://vitepress.dev/zh/", noIcon: false }
 ]

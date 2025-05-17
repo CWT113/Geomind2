@@ -4,6 +4,8 @@
 
   --vp-button-brand-bg: var(--vp-c-brand-1);
 
+  --blockquote-border-left: #3e69d7;
+
   --scrollbar-color: #e0e3e6;
   --scrollbar-color-hover: #c1c7ce;
   --scrollbar-dark-color: #6e7883;
@@ -127,4 +129,14 @@ img {
 }
 .medium-zoom-image {
   z-index: 9999 !important;
+}
+
+/* 表格宽度 */
+table {
+  width: 100% !important;
+  display: table;
+}
+.vp-doc table {
+  display: inline-table !important;
+  margin: 0 !important;
 }

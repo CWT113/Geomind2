@@ -36,7 +36,7 @@ Spring MVC 是 Spring 框架中提供的一个基于 Java 的 Web 框架，遵�
 
 它构建在 Servlet API 之上，提供了更高级别的抽象和更丰富的功能。
 
-::: success Spring MVC 的特点
+::: tip Spring MVC 的特点
 
 * 基于 MVC 设计模式：分离了视图、控制器、模型，结构更加清晰；
 
