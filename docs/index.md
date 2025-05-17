@@ -11,9 +11,16 @@ hero:
     alt: Geomind
   actions:
     - theme: brand
+      text: 编程导航
+      link: /navigation/index.md
+
+    - theme: alt
       text: 前端
       link:
-      target: _blank
+
+    - theme: alt
+      text: Java
+      link: /backend/Java/SpringMVC/MVC理论基础.md
 
 features:
   - icon: 🤹

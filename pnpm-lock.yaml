@@ -12,6 +12,9 @@ importers:
         specifier: ^3.5.14
         version: 3.5.14(typescript@5.8.3)
     devDependencies:
+      '@mdit-vue/shared':
+        specifier: ^2.1.4
+        version: 2.1.4
       '@theojs/lumen':
         specifier: ^5.4.2
         version: 5.4.2
@@ -329,6 +332,12 @@ packages:
 
   '@jridgewell/sourcemap-codec@1.5.0':
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
+
+  '@mdit-vue/shared@2.1.4':
+    resolution: {integrity: sha512-Axd8g2iKQTMuHcPXZH5JY3hbSMeLyoeu0ftdgMrjuPzHpJnWiPSAnA0dAx5NQFQqZkXHhyIrAssLSrOWjFmPKg==}
+
+  '@mdit-vue/types@2.1.4':
+    resolution: {integrity: sha512-QiGNZslz+zXUs2X8D11UQhB4KAMZ0DZghvYxa7+1B+VMLcDtz//XHpWbcuexjzE3kBXSxIUTPH3eSQCa0puZHA==}
 
   '@rollup/rollup-android-arm-eabi@4.40.2':
     resolution: {integrity: sha512-JkdNEq+DFxZfUwxvB58tHMHBHVgX23ew41g1OQinthJ+ryhdRk67O31S7sYw8u2lTjHUPFxwar07BBt1KHp/hg==}
@@ -1513,6 +1522,14 @@ snapshots:
       vue: 3.5.14(typescript@5.8.3)
 
   '@jridgewell/sourcemap-codec@1.5.0': {}
+
+  '@mdit-vue/shared@2.1.4':
+    dependencies:
+      '@mdit-vue/types': 2.1.4
+      '@types/markdown-it': 14.1.2
+      markdown-it: 14.1.0
+
+  '@mdit-vue/types@2.1.4': {}
 
   '@rollup/rollup-android-arm-eabi@4.40.2':
     optional: true

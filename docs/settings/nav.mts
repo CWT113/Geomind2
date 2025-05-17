@@ -1,5 +1,5 @@
 export const nav = [
-  { text: "导航", link: "/" },
+  { text: "编程导航", link: "/navigation/index.md" },
 
   {
     text: "Java",
@@ -9,10 +9,10 @@ export const nav = [
         text: "SSM",
         items: [
           // { text: "Spring6", link: "" },
-          { text: "SpringMVC", link: "/backend/Java/SpringMVC/MVC理论基础.md" },
-        ],
-      },
-    ],
+          { text: "SpringMVC", link: "/backend/Java/SpringMVC/MVC理论基础.md" }
+        ]
+      }
+    ]
   },
 
   {
@@ -23,12 +23,12 @@ export const nav = [
         items: [
           {
             text: "Cesium",
-            link: "/gis/Cesium/基础使用.md",
-          },
-        ],
-      },
-    ],
+            link: "/gis/Cesium/基础使用.md"
+          }
+        ]
+      }
+    ]
   },
 
-  { text: "VitePress", link: "https://vitepress.dev/zh/", noIcon: false },
-];
+  { text: "VitePress", link: "https://vitepress.dev/zh/", noIcon: false }
+]

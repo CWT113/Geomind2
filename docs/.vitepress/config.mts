@@ -17,7 +17,7 @@ export default defineConfig({
   cleanUrls: true,
   appearance: true,
   ignoreDeadLinks: false,
-  head: [["link", { rel: "icon", href: "/butterfly-logo.png" }]],
+  head: [["link", { rel: "icon", href: "/Geomind2/butterfly-logo.png" }]],
 
   // 站点地图
   sitemap: {
