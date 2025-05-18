@@ -2,7 +2,7 @@
 
 有了 SpringMVC 之后，我们不必再像之前那样一个请求创建一个 Servlet 了，它使用 `DispatcherServlet` 替代了 Tomcat 内置提供处理静态资源的 Servlet，也就是说现在所有的请求（除 JSP 文件）都会经过 `DispatcherServlet` 进行处理。![DispatcherServlet](.\assets\DispatcherServlet.png)
 
-## 配置视图解析器和控制器
+## 配置视图解析器
 
 要实现 HTML 页面的解析并返回到浏览器，就需要配置视图解析器，首先导入 Thymeleaf 的依赖：
 
