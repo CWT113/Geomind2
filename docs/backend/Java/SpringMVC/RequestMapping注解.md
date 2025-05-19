@@ -51,6 +51,31 @@ public class UserController {
 
 
 
+### 路径占位符
+
+路径占位符用于从 URL 中提取参数，可以使用 `@PathVariable` 注解来绑定 URL 路径中的变量到方法的形参上。
+
+::: tip 提示
+
+当使用路径占位符定义 value 时，请求的路径中必须携带路径占位符中的参数，否则报错！
+
+:::
+
+```java {4,5}
+@Controller
+@RequestMapping("user")
+public class UserController {
+  @RequestMapping("getUser/{id}/{name}")
+  public String getUser(@PathVariable("id") String id, @PathVariable("name") String name) {
+    System.out.println("id = " + id);
+    System.out.println("name = " + name);
+    return "user";
+  }
+}
+```
+
+
+
 ## 注解的 method 属性
 
 `@RequestMapping` 注解的 `method` 属性用于指定该请求处理方法所支持的 HTTP 请求类型。它可以是单个请求类型，或者多个请求类型组成的数组。

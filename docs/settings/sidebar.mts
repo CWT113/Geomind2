@@ -84,8 +84,12 @@ export const sidebar = {
           link: "/backend/Java/SpringMVC/Controller控制器.md"
         },
         {
-          text: "RequestMapping注解",
+          text: "@RequestMapping注解",
           link: "/backend/Java/SpringMVC/RequestMapping注解.md"
+        },
+        {
+          text: "获取请求参数",
+          link: "/backend/Java/SpringMVC/获取请求参数.md"
         }
       ]
     }
