@@ -86,7 +86,15 @@ export const sidebar = {
         {
           text: "获取请求参数",
           link: "/backend/Java/SpringMVC/获取请求参数.md"
-        }
+        },
+        {
+          text: "域对象共享数据",
+          link: "/backend/Java/SpringMVC/域对象共享数据.md"
+        },
+        {
+          text: "View视图",
+          link: "/backend/Java/SpringMVC/View视图.md"
+        },
       ]
     }
   ],
