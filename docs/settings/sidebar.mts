@@ -80,11 +80,7 @@ export const sidebar = {
           link: "/backend/Java/SpringMVC/项目搭建和环境配置.md"
         },
         {
-          text: "Controller控制器",
-          link: "/backend/Java/SpringMVC/Controller控制器.md"
-        },
-        {
-          text: "@RequestMapping注解",
+          text: "RequestMapping注解",
           link: "/backend/Java/SpringMVC/RequestMapping注解.md"
         },
         {
