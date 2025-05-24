@@ -92,8 +92,12 @@ export const sidebar = {
           link: "/backend/Java/SpringMVC/域对象共享数据.md"
         },
         {
-          text: "View视图",
-          link: "/backend/Java/SpringMVC/View视图.md"
+          text: "RestFul风格",
+          link: "/backend/Java/SpringMVC/Restful风格.md"
+        },
+        {
+          text: "HttpMessageConverter",
+          link: "/backend/Java/SpringMVC/HttpMessageConverter.md"
         },
       ]
     }
