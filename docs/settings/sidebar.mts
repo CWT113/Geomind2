@@ -99,6 +99,14 @@ export const sidebar = {
           text: "HttpMessageConverter",
           link: "/backend/Java/SpringMVC/HttpMessageConverter.md"
         },
+        {
+          text: "文件上传和下载",
+          link: "/backend/Java/SpringMVC/文件上传和下载.md"
+        },
+        {
+          text: "拦截器",
+          link: "/backend/Java/SpringMVC/拦截器.md"
+        },
       ]
     }
   ],
