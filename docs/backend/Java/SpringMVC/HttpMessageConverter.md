@@ -4,7 +4,7 @@
 
 
 
-## @RequestBody
+## @RequestBody 注解
 
 `@RequestBody` 用于 **将请求体中的 JSON、XML 等格式的数据反序列化成 Java 对象**。
 
@@ -24,7 +24,7 @@ public class UserController {
 
 ## RequestEntity
 
-`RequestEntity` 是一个 **更完整封装了 HTTP 请求数据的类**，通过它可以获取到请求的 请求头、请求体、请求方式和 请求地址等信息。
+`RequestEntity` 是一个 **更完整封装了 HTTP 请求数据的类**，通过它可以获取到请求的请求头、请求体、请求方式和请求地址等信息。
 
 ```java {5}
 @Controller
@@ -43,7 +43,7 @@ public class UserController {
 
 
 
-## @ResponseBody
+## @ResponseBody 注解
 
 先来回顾一下原生的 ServletAPI 中如何实现向页面返回数据：
 
@@ -75,19 +75,43 @@ public class UserController {
 
 
 
-### 处理 JSON
+### 返回 JSON 格式数据
+
+ `@ResponseBody` 注解默认可以将一个字符串作为响应体返回给客户端，但如果想返回一个对象作为响应体该怎么做呢？
+
+>直接将对象作为返回值响应是不行的，会报【HTTP 状态 406 - 不可接收】的错！
+
+此时，需要引入 `jackson-databind` 包：
+
+```xml
+<dependency>
+  <groupId>com.fasterxml.jackson.core</groupId>
+  <artifactId>jackson-databind</artifactId>
+  <version>2.19.0</version>
+</dependency>
+```
+
+然后直接将一个对象作为返回值进行响应即可：
+
+```java {7}
+@Controller
+@ResponseBody
+@RequestMapping("user")
+public class UserController {
+  @GetMapping("getUser")
+  public User getUser() {
+    return new User("admin", 123456, new String[]{"a", "b"}); // 将对象直接返回
+  }
+}
+```
 
 
 
-### 处理 Ajax
-
-
-
-## @RestController注解
+## @RestController 注解
 
 `@RestController` 注解相当于是 `@Controller` + `@ResponseBody` 的结合体。
 
->有了 `@RestController` 就不用在每个方法上都标注 `@ResponseBody` 了，它默认把整个控制器都设置为向客户端响应体返回结果。
+>有了 `@RestController` 就不用在每个方法上都标注 `@ResponseBody` 了，它可以标注在整个控制器上，表示控制器内的所有方法都设置为向客户端响应体返回结果。
 
 ::: code-group
 
@@ -119,4 +143,84 @@ public class UserController {
 
 
 ## ResponseEntity
+
+`ResponseEntity` 类用于 **在控制器方法中完全控制返回给客户端的 HTTP 响应内容**。
+
+基本使用：
+
+```java
+ResponseEntity<?> response 
+  = new ResponseEntity<>(body, headers, httpStatus);
+```
+
+|    参数    |     值类型     |     作用     |
+| :--------: | :------------: | :----------: |
+|    body    |     Object     | 响应体的内容 |
+|  headers   |     键值对     |    响应头    |
+| httpStatus | HttpStatus枚举 |   响应状态   |
+
+构建更加灵活的 `ResponseEntityBuilder`：
+
+```java
+ResponseEntity.ok("Hello, World!");
+
+ResponseEntity.ok().body("Hello, world!");
+
+ResponseEntity.ok().headers("key", "value").body("Hello, world!");
+
+ResponseEntity.status(HttpStatus.OK).body("Hello, World!");
+```
+
+| 方法                   | 作用                                  |
+| :--------------------- | :------------------------------------ |
+| ok(body)               | 返回状态为200，body直接作为响应体内容 |
+| body(Object)           | 向响应体中设置内容                    |
+| header("key", "value") | 向响应头中设置键值对数据              |
+| cacheControl()         | 设置响应头中键值对的缓存时间          |
+
+
+
+示例：
+
+```java {6,13,15,21-23,29,36}
+@RestController
+@RequestMapping("user")
+public class UserController {
+  @GetMapping("getResponse")
+  public ResponseEntity<String> getResponse() {
+    ResponseEntity<String> response = new ResponseEntity<>("Hello, World!", HttpStatus.OK);
+    return response;
+  }
+
+  @GetMapping("getParam")
+  public ResponseEntity<String> getParam(@RequestParam("id") Long id) {
+    if (id == 1) {
+      return ResponseEntity.ok("Hello, World!");
+    } else {
+      return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+    }
+  }
+
+  @GetMapping("getHeader")
+  public ResponseEntity<String> getHeader() {
+    return ResponseEntity.ok()
+      .header("MyHeader", "MyValue666")
+      .body("Hello, world!");
+  }
+
+  @GetMapping("getUser")
+  public ResponseEntity<User> getUser() {
+    User user = new User("admin", 123456);
+    return ResponseEntity.ok(user);
+  }
+
+  @GetMapping("getCache")
+  public ResponseEntity<String> getCache() {
+    return ResponseEntity.ok()
+      .header("MyHeader", "MyValue666")
+      .cacheControl(CacheControl.maxAge(10, TimeUnit.SECONDS)) // 10秒过期
+      .body("Hello, World!");
+  }
+}
+```
 
