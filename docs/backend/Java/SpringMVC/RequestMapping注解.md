@@ -1,6 +1,6 @@
-# RequestMapping注解
+# RequestMapping 注解
 
-`@RequestMapping` 注解用于将请求和控制器关联起来，建立接口的映射关系。
+`@RequestMapping` 注解用于将请求和控制器关联起来，建立请求与接口的映射关系。
 
 
 
@@ -15,10 +15,9 @@
 @Controller
 @RequestMapping("user")
 public class UserController {
-  @RequestMapping("list")
-  public String list() {
-    System.out.println("list method called.");
-    return "user";
+  @RequestMapping("index")
+  public String index() {
+    return "index";
   }
 }
 ```
@@ -27,11 +26,11 @@ public class UserController {
 
 ## 注解的 value 属性
 
-`@RequestMapping` 注解的 `value` 属性用于设置当前请求处理方法的请求路径。它可以是单个字符串，也可以是字符串数组（表示多个请求地址均映射到该方法）。
+`@RequestMapping` 注解的 `value` 属性用于 **设置当前请求处理方法的请求路径**。它可以是单个字符串，也可以是字符串数组（表示多个请求地址均映射到该方法）。
 
 ::: tip 提示
 
-- 注解的 value 属性必须设置一个值；
+- 注解的 value 属性至少设置一个值；
 - 注解的 value 属性中，可以携带 `/` ，也可以不带，看具体团队的代码风格即可；
 
 :::
@@ -40,36 +39,10 @@ public class UserController {
 @Controller
 @RequestMapping("user")
 public class UserController {
-  // @RequestMapping("list") // 或
-  @RequestMapping(value = {"list", "getUsers"}) // 多个请求地址均映射到该方法
+  @RequestMapping("list")
+  // @RequestMapping(value = {"list", "getUsers"}) // 多个请求地址均映射到该方法
   public String list() {
-    System.out.println("list method called.");
-    return "user";
-  }
-}
-```
-
-
-
-### 路径占位符
-
-路径占位符用于从 URL 中提取参数，可以使用 `@PathVariable` 注解来绑定 URL 路径中的变量到方法的形参上。
-
-::: tip 提示
-
-当使用路径占位符定义 value 时，请求的路径中必须携带路径占位符中的参数，否则报错！
-
-:::
-
-```java {4,5}
-@Controller
-@RequestMapping("user")
-public class UserController {
-  @RequestMapping("getUser/{id}/{name}")
-  public String getUser(@PathVariable("id") String id, @PathVariable("name") String name) {
-    System.out.println("id = " + id);
-    System.out.println("name = " + name);
-    return "user";
+    return "index";
   }
 }
 ```
@@ -78,7 +51,7 @@ public class UserController {
 
 ## 注解的 method 属性
 
-`@RequestMapping` 注解的 `method` 属性用于指定该请求处理方法所支持的 HTTP 请求类型。它可以是单个请求类型，或者多个请求类型组成的数组。
+`@RequestMapping` 注解的 `method` 属性用于 **指定该请求处理方法的HTTP请求类型**。它可以是单个请求类型，或者多个请求类型组成的数组。
 
 ::: tip 提示
 
@@ -90,31 +63,30 @@ public class UserController {
  @Controller
  @RequestMapping("user")
  public class UserController {
-   @RequestMapping(value = "list", method = RequestMethod.GET) // 当前请求处理方法只能用 GET 方式请求
-   // @RequestMapping(value = "list", method = {RequestMethod.GET, RequestMethod.POST}) // GET 和 POST 方式都可以请求
+   @RequestMapping(value = "list", method = RequestMethod.GET)
+   // @RequestMapping(value = "list", method = {RequestMethod.GET, RequestMethod.POST})
    public String list() {
-     System.out.println("list method called.");
-     return "user";
+     return "index";
    }
  }
  ```
 
 
 
-## 注解的 params 属性（了解）
+## 注解的 params 属性
 
-`@RequestMapping` 注解的 `params` 属性用于 限制请求中必须包含哪些参数或不能包含哪些参数，只有满足所有条件的请求才会被该方法处理。
+`@RequestMapping` 注解的 `params` 属性用于 **限制请求中必须包含哪些参数或不能包含哪些参数**，只有满足所有条件的请求才会被该方法处理。
 
 常用的匹配规则：
 
 |       写法        | 作用                                                |
 | :---------------: | --------------------------------------------------- |
 |    "username"     | 请求中必须包含名为 username 的参数                  |
-|    "!username"    | 请求中必须不能包含名为 username 的参数              |
-| "username=value"  | 请求中必须包含名为 username 且值为 value 的参数     |
-| "username!=value" | 请求中必须包含名为 username 且值不能为 value 的参数 |
+|    "! username"    | 请求中必须不能包含名为 username 的参数              |
+| "username = value"  | 请求中必须包含名为 username 且值为 value 的参数     |
+| "username!= value" | 请求中必须包含名为 username 且值不能为 value 的参数 |
 
->如果请求中 `params` 参数不满足上述的四种匹配规则，会报 HTTP状态400 - 错误的请求 Invalid request parameters. 的错。
+>如果请求中 `params` 参数不满足上述的四种匹配规则，会报 【HTTP 状态 400 - 错误的请求 Invalid request parameters. 】的错。
 
 ```java {5,11,17}
 @Controller
@@ -123,37 +95,37 @@ public class UserController {
   // 只处理带有 username 的参数的请求
   @RequestMapping(value = "checkUser", params = {"username"})
   public String checkUser() {
-    return "user";
+    return "index";
   }
 
   // 只处理 username=admin 的请求
   @RequestMapping(value = "admin", params = {"username=admin"})
   public String adminOnly() {
-    return "user";
+    return "index";
   }
 
   // 处理 username!=admin 的所有请求
   @RequestMapping(value = "tourist", params = {"username!=admin"})
   public String touristOnly() {
-    return "user";
+    return "index";
   }
 }
 ```
 
 
 
-## 注解的 header 属性（了解）
+## 注解的 header 属性
 
-`@RequestMapping` 注解的 `headers` 属性用于 限制请求中必须包含某些 HTTP 请求头或自定义请求头，只有满足所有条件的请求才会被该方法处理。
+`@RequestMapping` 注解的 `headers` 属性用于 **限制请求中必须包含某些 HTTP 请求头或自定义请求头**，只有满足所有条件的请求才会被该方法处理。
 
 常见的匹配规则：
 
 |     写法     | 作用                                               |
 | :----------: | -------------------------------------------------- |
 |    "key"     | 请求头中必须包含名为 key 的 header                 |
-|    "!key"    | 请求头中不能包含名为 key 的 header                 |
-| "key=value"  | 请求头中必须包含名为 key 且值为 value 的 header    |
-| "key!=value" | 请求头中必须包含 key，但其值不能是 value 的 header |
+|    "! key"    | 请求头中不能包含名为 key 的 header                 |
+| "key = value"  | 请求头中必须包含名为 key 且值为 value 的 header    |
+| "key!= value" | 请求头中必须包含 key，但其值不能是 value 的 header |
 
  ```java {4,10,16}
  @Controller
@@ -162,32 +134,32 @@ public class UserController {
    // 只有请求头中包含 content-type:application/json 才会匹配
    @RequestMapping(value = "jsonOnly", headers = {"content-type=application/json"})
    public String jsonOnly() {
-     return "user";
+     return "index";
    }
  
    // 请求头中不能包含 token
    @RequestMapping(value = "noToken", headers = {"!token"})
    public String noToken() {
-     return "user";
+     return "index";
    }
  
    // 请求头中必须包含 token 且值必须为 123abc
    @RequestMapping(value = "secure", headers = {"token=123abc"})
    public String secure() {
-     return "user";
+     return "index";
    }
  }
  ```
 
 
 
-## 派生注解 ⭐
+## 派生注解（重要）
 
 在 Spring4 之后，官方提供了一组针对 `@RequestMapping` 的派生注解，以更清晰的表达 HTTP 请求方法。
 
 常用的派生注解有：
 
-|    派生注解    | HTTP请求方法 | 等价写法                                       |
+|    派生注解    | HTTP 请求方法 | 等价写法                                       |
 | :------------: | :----------: | ---------------------------------------------- |
 |  @GetMapping   |     GET      | @RequestMapping(method = RequestMethod.GET)    |
 |  @PostMapping  |     POST     | @RequestMapping(method = RequestMethod.POST)   |
@@ -200,22 +172,22 @@ public class UserController {
 public class UserController {
   @GetMapping("list")
   public String listUsers() {
-    return "用户列表";
+    return "index";
   }
 
   @PostMapping("add")
   public String addUser() {
-    return "添加用户";
+    return "index";
   }
 
   @PutMapping("update")
   public String updateUser() {
-    return "更新用户";
+    return "index";
   }
 
   @DeleteMapping("delete/{id}")
   public String deleteUser(@PathVariable String id) {
-    return "删除用户：" + id;
+    return "index";
   }
 }
 ```

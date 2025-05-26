@@ -80,17 +80,33 @@ export const sidebar = {
           link: "/backend/Java/SpringMVC/项目搭建和环境配置.md"
         },
         {
-          text: "Controller控制器",
-          link: "/backend/Java/SpringMVC/Controller控制器.md"
-        },
-        {
-          text: "@RequestMapping注解",
+          text: "RequestMapping注解",
           link: "/backend/Java/SpringMVC/RequestMapping注解.md"
         },
         {
           text: "获取请求参数",
           link: "/backend/Java/SpringMVC/获取请求参数.md"
-        }
+        },
+        {
+          text: "域对象共享数据",
+          link: "/backend/Java/SpringMVC/域对象共享数据.md"
+        },
+        {
+          text: "RestFul风格",
+          link: "/backend/Java/SpringMVC/Restful风格.md"
+        },
+        {
+          text: "HttpMessageConverter",
+          link: "/backend/Java/SpringMVC/HttpMessageConverter.md"
+        },
+        {
+          text: "文件上传和下载",
+          link: "/backend/Java/SpringMVC/文件上传和下载.md"
+        },
+        {
+          text: "拦截器",
+          link: "/backend/Java/SpringMVC/拦截器.md"
+        },
       ]
     }
   ],
