@@ -107,6 +107,31 @@ export const sidebar = {
           text: "拦截器",
           link: "/backend/Java/SpringMVC/拦截器.md"
         },
+        {
+          text: "异常处理器",
+          link: "/backend/Java/SpringMVC/异常处理器.md"
+        },
+      ]
+    }
+  ],
+
+  "/backend/Java/Mybatis/": [
+    {
+      text: "MyBatis",
+      items: [
+        {
+          text: "基础使用",
+          link: "/backend/Java/Mybatis/基础使用.md"
+        }
+      ]
+    },
+    {
+      text: "MyBatis Plus",
+      items: [
+        {
+          text: "基础使用",
+          link: "/backend/Java/Mybatis/基础使用.md"
+        }
       ]
     }
   ],

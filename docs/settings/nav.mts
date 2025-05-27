@@ -67,7 +67,8 @@ export const nav = [
         text: "SSM",
         items: [
           { text: "Spring", link: "/backend/Java/Spring/Spring简介.md" },
-          { text: "SpringMVC", link: "/backend/Java/SpringMVC/MVC理论基础.md" }
+          { text: "SpringMVC", link: "/backend/Java/SpringMVC/MVC理论基础.md" },
+          { text: "MyBatis", link: "/backend/Java/Mybatis/基础使用.md" }
         ]
       }
     ]
