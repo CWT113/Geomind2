@@ -122,6 +122,18 @@ export const sidebar = {
         {
           text: "基础使用",
           link: "/backend/Java/Mybatis/基础使用.md"
+        },
+        {
+          text: "配置文件详解",
+          link: "/backend/Java/Mybatis/配置文件详解.md"
+        },
+        {
+          text: "查询操作",
+          link: "/backend/Java/Mybatis/查询操作.md"
+        },
+        {
+          text: "增删改操作",
+          link: "/backend/Java/Mybatis/增删改操作.md"
         }
       ]
     },

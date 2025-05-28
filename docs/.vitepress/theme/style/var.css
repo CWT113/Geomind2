@@ -102,7 +102,7 @@
 /* 文字选中背景色 */
 :root ::selection {
   color: var(--vp-c-brand-1);
-  background-color: #e8defd;
+  background-color: #B4ECCF;
 }
 .dark ::selection {
   color: var(--vp-c-brand-1);
