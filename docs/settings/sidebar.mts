@@ -110,7 +110,7 @@ export const sidebar = {
         {
           text: "异常处理器",
           link: "/backend/Java/SpringMVC/异常处理器.md"
-        },
+        }
       ]
     }
   ],
@@ -124,17 +124,17 @@ export const sidebar = {
           link: "/backend/Java/Mybatis/基础使用.md"
         },
         {
-          text: "配置文件详解",
-          link: "/backend/Java/Mybatis/配置文件详解.md"
-        },
-        {
           text: "查询操作",
           link: "/backend/Java/Mybatis/查询操作.md"
         },
         {
           text: "增删改操作",
           link: "/backend/Java/Mybatis/增删改操作.md"
-        }
+        },
+        {
+          text: "配置文件详解",
+          link: "/backend/Java/Mybatis/配置文件详解.md"
+        },
       ]
     },
     {
@@ -154,7 +154,13 @@ export const sidebar = {
       items: [
         { text: "基础使用", link: "/gis/Cesium/基础使用.md" },
         { text: "坐标系统", link: "/gis/Cesium/坐标系统.md" },
-        { text: "飞行视角", link: "/gis/Cesium/飞行视角.md" }
+        { text: "相机视角", link: "/gis/Cesium/飞行视角.md" },
+        {
+          text: "Entity实体",
+          items: [
+            { text: "实体绘制", link: "/gis/Cesium/实体绘制.md" },
+          ]
+        }
       ]
     }
   ]
