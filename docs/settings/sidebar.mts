@@ -124,6 +124,14 @@ export const sidebar = {
           link: "/backend/Java/Mybatis/基础使用.md"
         },
         {
+          text: "配置文件详解",
+          link: "/backend/Java/Mybatis/配置文件详解.md"
+        },
+        {
+          text: "获取参数值",
+          link: "/backend/Java/Mybatis/获取参数值.md"
+        },
+        {
           text: "查询操作",
           link: "/backend/Java/Mybatis/查询操作.md"
         },
@@ -131,18 +139,21 @@ export const sidebar = {
           text: "增删改操作",
           link: "/backend/Java/Mybatis/增删改操作.md"
         },
-        {
-          text: "配置文件详解",
-          link: "/backend/Java/Mybatis/配置文件详解.md"
-        },
       ]
-    },
+    }
+  ],
+
+  "/backend/Java/MybatisPlus/": [
     {
       text: "MyBatis Plus",
       items: [
         {
           text: "基础使用",
-          link: "/backend/Java/Mybatis/基础使用.md"
+          link: "/backend/Java/MybatisPlus/基础使用.md"
+        },
+        {
+          text: "常用注解",
+          link: "/backend/Java/MybatisPlus/常用注解.md"
         }
       ]
     }
@@ -158,7 +169,7 @@ export const sidebar = {
         {
           text: "Entity实体",
           items: [
-            { text: "实体绘制", link: "/gis/Cesium/实体绘制.md" },
+            { text: "实体绘制", link: "/gis/Cesium/实体绘制.md" }
           ]
         }
       ]
