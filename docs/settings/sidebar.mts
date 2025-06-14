@@ -139,6 +139,14 @@ export const sidebar = {
           text: "增删改操作",
           link: "/backend/Java/Mybatis/增删改操作.md"
         },
+        {
+          text: "自定义映射",
+          link: "/backend/Java/Mybatis/自定义映射.md"
+        },
+        {
+          text: "动态SQL",
+          link: "/backend/Java/Mybatis/动态SQL.md"
+        },
       ]
     }
   ],

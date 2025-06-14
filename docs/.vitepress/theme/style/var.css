@@ -55,6 +55,10 @@
   }
 }
 
+.vp-doc a {
+  text-decoration: underline !important;
+}
+
 .vp-doc p {
   font-size: 15px;
   line-height: 1.8;
