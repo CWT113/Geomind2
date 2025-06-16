@@ -147,6 +147,18 @@ export const sidebar = {
           text: "动态SQL",
           link: "/backend/Java/Mybatis/动态SQL.md"
         },
+        {
+          text: "缓存",
+          link: "/backend/Java/Mybatis/缓存.md"
+        },
+        {
+          text: "逆向工程",
+          link: "/backend/Java/Mybatis/逆向工程.md"
+        },
+        {
+          text: "分页插件",
+          link: "/backend/Java/Mybatis/分页插件.md"
+        },
       ]
     }
   ],
