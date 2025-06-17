@@ -152,10 +152,6 @@ export const sidebar = {
           link: "/backend/Java/Mybatis/缓存.md"
         },
         {
-          text: "逆向工程",
-          link: "/backend/Java/Mybatis/逆向工程.md"
-        },
-        {
           text: "分页插件",
           link: "/backend/Java/Mybatis/分页插件.md"
         },
