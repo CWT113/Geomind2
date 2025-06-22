@@ -154,7 +154,7 @@ export const sidebar = {
         {
           text: "分页插件",
           link: "/backend/Java/Mybatis/分页插件.md"
-        },
+        }
       ]
     }
   ],
@@ -166,6 +166,14 @@ export const sidebar = {
         {
           text: "基础使用",
           link: "/backend/Java/MybatisPlus/基础使用.md"
+        },
+        {
+          text: "查询功能",
+          link: "/backend/Java/MybatisPlus/查询功能.md"
+        },
+        {
+          text: "增删改功能",
+          link: "/backend/Java/MybatisPlus/增删改功能.md"
         },
         {
           text: "常用注解",
