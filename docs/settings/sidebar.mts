@@ -176,8 +176,32 @@ export const sidebar = {
           link: "/backend/Java/MybatisPlus/增删改功能.md"
         },
         {
+          text: "Service 接口",
+          link: "/backend/Java/MybatisPlus/Service接口.md"
+        },
+        {
           text: "常用注解",
           link: "/backend/Java/MybatisPlus/常用注解.md"
+        },
+        {
+          text: "条件构造器",
+          link: "/backend/Java/MybatisPlus/条件构造器.md"
+        },
+        {
+          text: "分页插件",
+          link: "/backend/Java/MybatisPlus/分页插件.md"
+        },
+        {
+          text: "乐观锁和悲观锁",
+          link: "/backend/Java/MybatisPlus/乐观锁和悲观锁.md"
+        },
+        {
+          text: "代码生成器",
+          link: "/backend/Java/MybatisPlus/代码生成器.md"
+        },
+        {
+          text: "MybatisX插件",
+          link: "/backend/Java/MybatisPlus/MybatisX插件.md"
         }
       ]
     }
@@ -192,9 +216,7 @@ export const sidebar = {
         { text: "相机视角", link: "/gis/Cesium/飞行视角.md" },
         {
           text: "Entity实体",
-          items: [
-            { text: "实体绘制", link: "/gis/Cesium/实体绘制.md" }
-          ]
+          items: [{ text: "实体绘制", link: "/gis/Cesium/实体绘制.md" }]
         }
       ]
     }
