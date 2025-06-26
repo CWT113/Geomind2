@@ -188,11 +188,15 @@ export const sidebar = {
           link: "/backend/Java/MybatisPlus/条件构造器.md"
         },
         {
+          text: "自动映射枚举",
+          link: "/backend/Java/MybatisPlus/自动映射枚举.md"
+        },
+        {
           text: "分页插件",
           link: "/backend/Java/MybatisPlus/分页插件.md"
         },
         {
-          text: "乐观锁和悲观锁",
+          text: "乐观锁插件",
           link: "/backend/Java/MybatisPlus/乐观锁和悲观锁.md"
         },
         {
