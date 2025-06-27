@@ -56,7 +56,7 @@
 }
 
 .vp-doc a {
-  text-decoration: none;
+  text-decoration: underline !important;
 }
 
 .vp-doc p {

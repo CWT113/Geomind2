@@ -124,6 +124,14 @@ export const sidebar = {
           link: "/backend/Java/Mybatis/基础使用.md"
         },
         {
+          text: "配置文件详解",
+          link: "/backend/Java/Mybatis/配置文件详解.md"
+        },
+        {
+          text: "获取参数值",
+          link: "/backend/Java/Mybatis/获取参数值.md"
+        },
+        {
           text: "查询操作",
           link: "/backend/Java/Mybatis/查询操作.md"
         },
@@ -132,17 +140,72 @@ export const sidebar = {
           link: "/backend/Java/Mybatis/增删改操作.md"
         },
         {
-          text: "配置文件详解",
-          link: "/backend/Java/Mybatis/配置文件详解.md"
+          text: "自定义映射",
+          link: "/backend/Java/Mybatis/自定义映射.md"
         },
+        {
+          text: "动态SQL",
+          link: "/backend/Java/Mybatis/动态SQL.md"
+        },
+        {
+          text: "缓存",
+          link: "/backend/Java/Mybatis/缓存.md"
+        },
+        {
+          text: "分页插件",
+          link: "/backend/Java/Mybatis/分页插件.md"
+        }
       ]
-    },
+    }
+  ],
+
+  "/backend/Java/MybatisPlus/": [
     {
       text: "MyBatis Plus",
       items: [
         {
           text: "基础使用",
-          link: "/backend/Java/Mybatis/基础使用.md"
+          link: "/backend/Java/MybatisPlus/基础使用.md"
+        },
+        {
+          text: "查询功能",
+          link: "/backend/Java/MybatisPlus/查询功能.md"
+        },
+        {
+          text: "增删改功能",
+          link: "/backend/Java/MybatisPlus/增删改功能.md"
+        },
+        {
+          text: "Service 接口",
+          link: "/backend/Java/MybatisPlus/Service接口.md"
+        },
+        {
+          text: "常用注解",
+          link: "/backend/Java/MybatisPlus/常用注解.md"
+        },
+        {
+          text: "条件构造器",
+          link: "/backend/Java/MybatisPlus/条件构造器.md"
+        },
+        {
+          text: "自动映射枚举",
+          link: "/backend/Java/MybatisPlus/自动映射枚举.md"
+        },
+        {
+          text: "分页插件",
+          link: "/backend/Java/MybatisPlus/分页插件.md"
+        },
+        {
+          text: "乐观锁插件",
+          link: "/backend/Java/MybatisPlus/乐观锁和悲观锁.md"
+        },
+        {
+          text: "代码生成器",
+          link: "/backend/Java/MybatisPlus/代码生成器.md"
+        },
+        {
+          text: "MybatisX插件",
+          link: "/backend/Java/MybatisPlus/MybatisX插件.md"
         }
       ]
     }
@@ -157,9 +220,7 @@ export const sidebar = {
         { text: "相机视角", link: "/gis/Cesium/飞行视角.md" },
         {
           text: "Entity实体",
-          items: [
-            { text: "实体绘制", link: "/gis/Cesium/实体绘制.md" },
-          ]
+          items: [{ text: "实体绘制", link: "/gis/Cesium/实体绘制.md" }]
         }
       ]
     }
