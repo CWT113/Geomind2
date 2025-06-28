@@ -202,10 +202,6 @@ export const sidebar = {
         {
           text: "代码生成器",
           link: "/backend/Java/MybatisPlus/代码生成器.md"
-        },
-        {
-          text: "MybatisX插件",
-          link: "/backend/Java/MybatisPlus/MybatisX插件.md"
         }
       ]
     }
