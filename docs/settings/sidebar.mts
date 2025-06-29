@@ -207,6 +207,22 @@ export const sidebar = {
     }
   ],
 
+  "/backend/Java/SpringBoot/": [
+    {
+      text: "SpringBoot",
+      items: [
+        {
+          text: "基础使用",
+          link: "/backend/Java/SpringBoot/基础使用.md"
+        },
+        {
+          text: "Bean注册与管理",
+          link: "/backend/Java/SpringBoot/Bean注册与管理.md"
+        }
+      ]
+    }
+  ],
+
   "/gis/Cesium/": [
     {
       text: "基础篇",
