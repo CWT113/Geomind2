@@ -71,7 +71,8 @@ export const nav = [
           { text: "MyBatis", link: "/backend/Java/Mybatis/基础使用.md" },
           { text: "MyBatisPlus", link: "/backend/Java/MybatisPlus/基础使用.md" }
         ]
-      }
+      },
+      { text: "SpringBoot", link: "/backend/Java/SpringBoot/基础使用.md" },
     ]
   },
 

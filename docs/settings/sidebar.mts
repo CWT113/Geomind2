@@ -218,6 +218,10 @@ export const sidebar = {
         {
           text: "Bean注册与管理",
           link: "/backend/Java/SpringBoot/Bean注册与管理.md"
+        },
+        {
+          text: "自动装配",
+          link: "/backend/Java/SpringBoot/自动装配.md"
         }
       ]
     }

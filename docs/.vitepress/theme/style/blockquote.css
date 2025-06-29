@@ -5,3 +5,8 @@
   background-color: var(--vp-c-gray-soft);
   border-left: 4px solid var(--blockquote-border-left);
 }
+
+/* > 注释的文字大小 */
+.vp-doc blockquote > p {
+  font-size: 15px;
+}
