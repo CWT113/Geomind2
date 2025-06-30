@@ -84,7 +84,8 @@
   background-clip: content-box;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--scrollbar-color);
+  cursor: pointer;
+  background-color: var(--scrollbar-color-hover);
 }
 .VPSidebar::-webkit-scrollbar-thumb {
   visibility: hidden;
@@ -96,6 +97,7 @@
   background-color: var(--scrollbar-dark-color);
 }
 .dark ::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
   background-color: var(--scrollbar-dark-color-hover);
 }
 

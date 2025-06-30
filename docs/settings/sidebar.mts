@@ -202,10 +202,26 @@ export const sidebar = {
         {
           text: "代码生成器",
           link: "/backend/Java/MybatisPlus/代码生成器.md"
+        }
+      ]
+    }
+  ],
+
+  "/backend/Java/SpringBoot/": [
+    {
+      text: "SpringBoot",
+      items: [
+        {
+          text: "基础使用",
+          link: "/backend/Java/SpringBoot/基础使用.md"
         },
         {
-          text: "MybatisX插件",
-          link: "/backend/Java/MybatisPlus/MybatisX插件.md"
+          text: "Bean注册与管理",
+          link: "/backend/Java/SpringBoot/Bean注册与管理.md"
+        },
+        {
+          text: "自动装配",
+          link: "/backend/Java/SpringBoot/自动装配.md"
         }
       ]
     }
