@@ -1,11 +1,11 @@
 :root {
-  --vp-c-bg: #fff;
+  --vp-c-bg: #ffffff;
   --vp-c-bg-alt: #f0f0f0;
-
+  
   --vp-button-brand-bg: var(--vp-c-brand-1);
-
+  
   --blockquote-border-left: #3e69d7;
-
+  
   --scrollbar-color: #e0e3e6;
   --scrollbar-color-hover: #c1c7ce;
   --scrollbar-dark-color: #6e7883;
@@ -15,21 +15,21 @@
 .dark {
   --vp-c-bg: #161618;
   --vp-c-bg-alt: #1b1b1f;
-
+  
   --vp-button-brand-bg: var(--vp-c-brand-1);
 }
 
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    var(--vp-c-brand-1) 30%,
-    var(--vp-c-brand-next)
+		  120deg,
+		  var(--vp-c-brand-1) 30%,
+		  var(--vp-c-brand-next)
   );
   --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    var(--vp-c-brand-1) 30%,
-    var(--vp-c-brand-next)
+		  -45deg,
+		  var(--vp-c-brand-1) 30%,
+		  var(--vp-c-brand-next)
   );
   --vp-home-hero-image-filter: blur(80px);
 }
@@ -46,12 +46,13 @@
 
 @media (min-width: 640px) {
   :root {
-    --vp-home-hero-image-filter: blur(120px);
+	--vp-home-hero-image-filter: blur(120px);
   }
 }
+
 @media (min-width: 960px) {
   :root {
-    --vp-home-hero-image-filter: blur(120px);
+	--vp-home-hero-image-filter: blur(120px);
   }
 }
 
@@ -74,28 +75,35 @@
 ::-webkit-scrollbar {
   width: 15px;
 }
+
 ::-webkit-scrollbar-track {
   background-color: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-color);
   border-radius: 15px;
   border: 5px solid rgba(0, 0, 0, 0);
   background-clip: content-box;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
   background-color: var(--scrollbar-color-hover);
 }
+
 .VPSidebar::-webkit-scrollbar-thumb {
   visibility: hidden;
 }
+
 .VPSidebar:hover::-webkit-scrollbar-thumb {
   visibility: visible;
 }
+
 .dark ::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-dark-color);
 }
+
 .dark ::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
   background-color: var(--scrollbar-dark-color-hover);
@@ -104,8 +112,9 @@
 /* 文字选中背景色 */
 :root ::selection {
   color: var(--vp-c-brand-1);
-  background-color: #B4ECCF;
+  background-color: #b4eccf;
 }
+
 .dark ::selection {
   color: var(--vp-c-brand-1);
   background-color: #382d53;
@@ -114,9 +123,10 @@
 /* 代码块样式 */
 .vp-code pre,
 .vp-code code {
-  font-size: 15px;
+  font-size: 13px !important;
   font-family: "JetBrains Mono", "Source Code Pro", monospace;
 }
+
 code {
   font-size: 15px;
   font-family: "JetBrains Mono", "Source Code Pro", monospace;
@@ -126,9 +136,11 @@ code {
 img {
   border-radius: 4px;
 }
+
 .medium-zoom-overlay {
   z-index: 30;
 }
+
 .medium-zoom-image {
   z-index: 9999 !important;
 }
@@ -138,7 +150,16 @@ table {
   width: 100% !important;
   display: table;
 }
+
 .vp-doc table {
   display: inline-table !important;
   margin: 0 !important;
+}
+
+.aside-container {
+  width: 280px !important;
+}
+
+ul li {
+  font-size: 15px;
 }
