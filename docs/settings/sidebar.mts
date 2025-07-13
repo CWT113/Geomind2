@@ -1,4 +1,66 @@
 export const sidebar = {
+  "/frontend/CSS/": [
+    {
+      text: "基础语法",
+      items: [
+        {
+          text: "基础使用",
+          link: "/frontend/CSS/基础使用.md"
+        },
+        {
+          text: "Less",
+          link: "/frontend/CSS/Less.md"
+        },
+        {
+          text: "Scss",
+          link: "/frontend/CSS/Scss.md"
+        }
+      ]
+    },
+    {
+      text: "样式布局",
+      items: [
+        {
+          text: "Flex布局",
+          link: "/frontend/CSS/flex布局.md"
+        },
+        {
+          text: "Grid布局",
+          link: "/frontend/CSS/grid布局.md"
+        }
+      ]
+    },
+    {
+      text: "原子化CSS",
+      items: [
+        {
+          text: "TailwindCSS",
+          link: "/frontend/CSS/TailwindCSS.md"
+        },
+        {
+          text: "UnoCSS",
+          link: "/frontend/CSS/UnoCSS.md"
+        }
+      ]
+    }
+  ],
+
+  "/frontend/Gits/": [
+    {
+      text: "Git",
+      items: [
+        {
+          text: "Git分支",
+          link: "/frontend/Gits/分支分类.md"
+        },
+        {
+          text: "Git代理",
+          link: "/frontend/Gits/Git代理.md"
+        }
+      ]
+    }
+  ],
+
   "/frontend/MicroFrontend/": [
     {
       text: "传统嵌入式",
