@@ -2,7 +2,7 @@
 
 > [!IMPORTANT] 必看
 >
-> 这一节涉及 SpringBoot 的核心原理，需要多看几遍，[视频课程](https://www.bilibili.com/video/BV14z4y1N7pg?spm_id_from=333.788.videopod.episodes&vd_source=61f3a730a0daea9e6b7d510fb19007fd&p=8)。
+> 这一节涉及 SpringBoot 的核心原理，需要多看几遍，[🔗 视频课程](https://www.bilibili.com/video/BV14z4y1N7pg?spm_id_from=333.788.videopod.episodes&vd_source=61f3a730a0daea9e6b7d510fb19007fd&p=8)。
 
 
 
@@ -67,7 +67,6 @@ public class Boot03DemoApplication {
 @AllArgsConstructor
 public class Product { // 假设 Product 类是第三方的类
   private String name;
-
   private Integer price;
 }
 ```
@@ -87,12 +86,12 @@ public class AppConfig {
 }
 ```
 
-```java [Boot04DemoApplication] {8,12}
+```java [Application] {8,12}
 @SpringBootApplication
-public class Boot04DemoApplication {
+public class Application {
   public static void main(String[] args) {
     // 通过启动类的返回值可以查看所有加载的 Bean 对象
-    ConfigurableApplicationContext context = SpringApplication.run(Boot04DemoApplication.class, args);
+    ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
 
     // 通过 getBean(clazz) 方法获取注入的 Bean 对象
     Product product = context.getBean(Product.class);
@@ -111,21 +110,21 @@ public class Boot04DemoApplication {
 
 ### @Import
 
-> 启动类默认只注入当前类所在包及其子包下的 Bean，当把 `config/AppConfig` 文件放到启动类所在包的外面，此时使用上面的方式加载就会出错。
+> 启动类默认只注入当前类所在包及其子包下的 Bean，当把 `config/AppConfig` 文件放到启动类所在包的外面，此时使用上面的方式加载就会出错（一般不要这么做）。
 
 为了解决这个问题，就需要使用 `@Import` 来手动注入 Bean：
 
-```java {2,1}
+```java {1}
 @Import(AppConfig.class) // 将类手动注入到 IoC 容器中
 // @Import({AppConfig.class, CommonConfig.class}) // 也可以使用数组的方式注入多个类
 @SpringBootApplication
 public class Boot04DemoApplication {
-    public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(Boot04DemoApplication.class, args);
+  public static void main(String[] args) {
+    ConfigurableApplicationContext context = SpringApplication.run(Boot04DemoApplication.class, args);
 
-        Product product = context.getBean(Product.class);
-        System.out.println("product = " + product);
-    }
+    Product product = context.getBean(Product.class);
+    System.out.println("product = " + product);
+  }
 }
 ```
 
@@ -304,4 +303,4 @@ public class Boot04DemoApplication {
 
 :::
 
-![Bean注入](./assets/Bean注入.jpg)
+![Bean 注入](./assets/Bean注入.jpg)
