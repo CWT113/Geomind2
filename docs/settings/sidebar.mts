@@ -332,6 +332,10 @@ export const sidebar = {
         {
           text: "自动装配",
           link: "/backend/Java/SpringBoot/自动装配.md"
+        },
+        {
+          text: "日志",
+          link: "/backend/Java/SpringBoot/日志.md"
         }
       ]
     }
