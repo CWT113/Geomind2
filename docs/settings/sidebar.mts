@@ -336,6 +336,10 @@ export const sidebar = {
         {
           text: "日志",
           link: "/backend/Java/SpringBoot/日志.md"
+        },
+        {
+          text: "启动参数配置",
+          link: "/backend/Java/SpringBoot/启动参数配置.md"
         }
       ]
     }
