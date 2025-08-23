@@ -4,4 +4,5 @@ cache
 .cache
 .temp
 .vscode
+.idea
 *.local
