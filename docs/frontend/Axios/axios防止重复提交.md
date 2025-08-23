@@ -1,10 +1,8 @@
-防止重复提交
+# 防止重复提交
 
+## Map 集合方式
 
-
-Map集合缓存请求
-
-> [!IMPORTANT]
+> [!IMPORTANT] 实现思路
 >
 > - 用 `Map` 集合存储正在执行中的请求，并使用 method + url + params + data 作为唯一键；
 > - 如果短时间内相同的请求还没有结束，就组织新的请求发起；
@@ -109,7 +107,12 @@ export const useResubmit = () => {
 
 
 
-时间戳区分请求
+## 时间戳方式
+
+> [!CAUTION] 缺点
+>
+> - 不能真正阻止重复提交，如果用户点两次按钮，即使时间戳不同，还是会发起两次请求；
+> - 服务端压力并不会减少，重复的请求仍然会到达服务端；
 
 ```typescript
 import axios, { type AxiosResponse } from 'axios'
@@ -161,15 +164,9 @@ export default service
 
 
 
-全局Loading方式
+## 全局 Loading 方式
 
 >Loading 方式并不是严格意义上的防重复提交，更多的是 “用体验来降低重复提交的概率”。
-
-
-
-
-
-
 
 ```typescript
 import { ElLoading } from 'element-plus'
