@@ -115,27 +115,27 @@ export const nav = [
   //   ]
   // },
 
-  // {
-  //   text: "DevOps",
-  //   items: [
-  //     {
-  //       text: "Linux",
-  //       link: "/a.md"
-  //     },
-  //     {
-  //       text: "Nginx",
-  //       link: "/a.md"
-  //     },
-  //     {
-  //       text: "Docker",
-  //       link: "/a.md"
-  //     },
-  //     {
-  //       text: "K8s",
-  //       link: "/a.md"
-  //     }
-  //   ]
-  // },
+  {
+    text: "运维",
+    items: [
+      {
+        text: "Linux",
+        link: "/devops/linux/系统命令.md"
+      },
+      // {
+      //   text: "Nginx",
+      //   link: "/a.md"
+      // },
+      {
+        text: "Docker",
+        link: "/devops/docker/基础入门.md"
+      },
+      // {
+      //   text: "K8s",
+      //   link: "/a.md"
+      // }
+    ]
+  },
 
   { text: "听首歌", link: "https://vitepress.dev/zh/", noIcon: false }
 ]

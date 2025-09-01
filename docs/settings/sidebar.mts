@@ -358,5 +358,34 @@ export const sidebar = {
         }
       ]
     }
+  ],
+
+  "/devops/docker/": [
+    {
+      text:"安装教程",
+      link:"/devops/docker/安装教程.md"
+    },
+    {
+      text:"基础入门",
+      link:"/devops/docker/基础入门.md"
+    },
+    {
+      text:"Dockerfile语法",
+      link:"/devops/docker/Dockerfile语法.md"
+    }
+  ],
+
+  "/devops/linux/":[
+    {
+      text: "基础命令",
+      items: [
+        { text: "系统命令", link: "/devops/linux/系统命令.md" },
+        // { text: "常用命令", link: "/operations/linux/常用命令.md" },
+        // { text: "用户和权限", link: "/operations/linux/用户和权限.md" },
+        // { text: "vim", link: "/operations/linux/vim.md" },
+        // { text: "固定IP地址", link: "/operations/linux/固定IP地址.md" },
+        // { text: "yum设置阿里源", link: "/operations/linux/yum设置阿里源.md" }
+      ]
+    },
   ]
 }
