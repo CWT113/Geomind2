@@ -1,49 +1,81 @@
-# Dockerfile 语法
+# Dockerfile
 
-镜像就是包含了 **应用程序**、程序运行的 **系统函数库**、运行 **配置文件** 的文件包。构建镜像的过程其实就是把上述文件打包的过程。
+## 镜像分层结构
 
+镜像由多个 只读层（read-only layers）组成，每一层代表一次文件系统的变更（例如新增文件、安装依赖、修改配置等）。
 
+这些层被叠加在一起，就形成了一个完整的文件系统：
 
-## 镜像结构
-
-```bash {5,7-12}
-[root@localhost _data]# docker pull redis
-Using default tag: latest
-latest: Pulling from library/redis
-# 基础镜像（下载其他镜像的时候已经下载过了）
-b1badc6e5066: Already exists
-# redis 镜像单独需要的 layer
-e51f60c71d8e: Pull complete 
-311d9cf20af5: Pull complete 
-f22261c94fe4: Pull complete 
-6f34ca96de3f: Pull complete 
-4f4fb700ef54: Pull complete 
-63edde0222ea: Pull complete 
-Digest: sha256:cc2dfb8f5151da2684b4a09bd04b567f92d07591d91980eb3eca21df07e12760
-Status: Downloaded newer image for redis:latest
-docker.io/library/redis:latest
-```
+- **基础镜像层**：通常是操作系统的环境层，例如 `ubuntu:20.04` 或 `centos:7`；
+- **应用层**：在基础镜像上安装依赖、复制文件、配置环境变量等；
+- **最终层**：镜像的应用启动命令和运行配置；
 
 <img src="./assets/4.png" alt="镜像结构" />
 
-## Dockerfile
 
-Dockerfile 就是一个文本文件，其中包含了一个个的 **指令**（Instruction），用指令来说明要执行哪些操作构建镜像。将来 Docker 可以根据 Dockerfile  帮我们构建镜像。
+
+## Dockerfile 语法
+
+Dockerfile 就是一个文本文件，其中包含了一个个的 **指令**（Instruction），用指令来说明要执行哪些操作构建镜像。
 
 常见的指令如下：
 
-|    指令    | 说明                                           | 示例                                                         |
-| :--------: | :--------------------------------------------- | :----------------------------------------------------------- |
-|    FROM    | 指定基础镜像                                   | FROM centos: 6                                                |
-|    ENV     | 设置环境变量，可在后面指令中使用               | ENV key value                                                |
-|    COPY    | 拷贝本地文件到镜像的指定目录                   | COPY /xxx.tar.gz /tmp                                        |
-|    RUN     | 执行 linux 的 shell 命令，一般是安装过程中命令 | RUN tar -zxvf /tmp/xxxt.tar.gz <br />&& EXPORTS path =/tmp/xxx:$path |
-|   EXPOSE   | 指定容器运行时监听的端口，是给镜像使用者看的   | EXPOSE 8080                                                  |
-| ENTRYPOINT | 镜像中应用的启动命令，容器运行时调用           | ENTRYPOINT java -jar xx.jar                                  |
+|    指令    | 说明                                           |
+| :--------: | :--------------------------------------------- |
+|    FROM    | 指定基础镜像                                   |
+|    ENV     | 设置环境变量，可在后面指令中使用               |
+|    COPY    | 拷贝本地文件到镜像的指定目录                   |
+|    RUN     | 执行 linux 的 shell 命令，一般是安装过程中命令 |
+|   EXPOSE   | 指定容器运行时监听的端口，是给镜像使用者看的   |
+| ENTRYPOINT | 镜像中应用的启动命令，容器运行时调用           |
 
-例如，基于 ubuntu 基础镜像，利用 Dockerfile 构建一个镜像（左图）。也可以使用其他人公开构建好的基础镜像进行直接构建（右图）。
+::: code-group
 
-![image-20250901230114243](./assets/image-20250901230114243.png)
+```bash [基于基础镜像构建]
+# 使用 JDK 21 运行环境
+FROM openjdk:21-jdk-slim
+# 设置时区
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+# 拷贝 jar 包
+COPY docker-demo.jar /app.jar
+# 入口
+ENTRYPOINT ["java", "-jar", "/app.jar"]
+```
+
+```bash [手动构建镜像]
+# 指定基础镜像
+FROM ubuntu:16.04
+# 配置环境变量，JDK的安装目录、容器内时区
+ENV JAVA_DIR=/usr/local
+# 拷贝JDK和Java项目的包
+COPY ./jdk8.tar.gz $JAVA_DIR/
+COPY ./docker-demo.jar /tmp/app.jar
+# 安装JDK
+RUN cd $JAVA_DIR && tar -xf ./jdk8.tar.gz && mv ./jdk1.8.0_144 ./java8
+# 配置环境变量
+ENV JAVA_HOME=$JAVA_DIR/java8
+ENV PATH=$PATH:$JAVA_HOME/bin
+# 入口
+ENTRYPOINT ["java", "-jar", "app.jar"]
+```
+
+:::
+
+当编写好了 Dockerfile，就可以利用下面的命令来构建镜像：
+
+> [!IMPORTANT] 注意
+>
+> 如果要使用 `.` 时，jar 包和 Dockerfile 文件必须放在同一个目录下。
+
+```bash
+docker build -t docker-demo:1.0.0 .
+# 参数说明: 
+# -t : 表示给镜像起名字，依旧遵循 repository:tag 的格式
+#  . : 是指定 Dockerfile 所在的目录，. 表示当前目录
+```
+
+
 
 
 
