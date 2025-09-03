@@ -363,14 +363,18 @@ export const sidebar = {
   "/devops/docker/": [
     {
       text:"安装教程",
-      link:"/devops/docker/安装教程.md"
+      link:"/devops/docker/Docker安装教程.md"
+    },
+    {
+      text: "镜像",
+      link: "/devops/docker/镜像.md"
     },
     {
       text:"基础入门",
       link:"/devops/docker/基础入门.md"
     },
     {
-      text:"Dockerfile语法",
+      text:"Dockerfile",
       link:"/devops/docker/Dockerfile语法.md"
     }
   ],
