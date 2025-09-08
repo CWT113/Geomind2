@@ -2,7 +2,7 @@
 
 ## 镜像分层结构
 
-镜像由多个 只读层（read-only layers）组成，每一层代表一次文件系统的变更（例如新增文件、安装依赖、修改配置等）。
+镜像由多个 **只读层**（read-only layers）组成，每一层代表一次文件系统的变更（例如新增文件、安装依赖、修改配置等）。
 
 这些层被叠加在一起，就形成了一个完整的文件系统：
 
@@ -23,6 +23,7 @@ Dockerfile 就是一个文本文件，其中包含了一个个的 **指令**（I
 |    指令    | 说明                                           |
 | :--------: | :--------------------------------------------- |
 |    FROM    | 指定基础镜像                                   |
+|   LABEL    | 自定义标签                                     |
 |    ENV     | 设置环境变量，可在后面指令中使用               |
 |    COPY    | 拷贝本地文件到镜像的指定目录                   |
 |    RUN     | 执行 linux 的 shell 命令，一般是安装过程中命令 |
@@ -34,13 +35,22 @@ Dockerfile 就是一个文本文件，其中包含了一个个的 **指令**（I
 ```bash [基于基础镜像构建]
 # 使用 JDK 21 运行环境
 FROM openjdk:21-jdk-slim
+
 # 设置时区
 ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# 自定义标签
+LABEL author=Yibo Wang
+
 # 拷贝 jar 包
-COPY docker-demo.jar /app.jar
+COPY docker-demo.jar /docker-demo.jar
+
+# 暴漏端口
+# EXPOSE 8080
+
 # 入口
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+ENTRYPOINT ["java", "-jar", "/docker-demo.jar"]
 ```
 
 ```bash [手动构建镜像]
@@ -69,10 +79,15 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 > 如果要使用 `.` 时，jar 包和 Dockerfile 文件必须放在同一个目录下。
 
 ```bash
-docker build -t docker-demo:1.0.0 .
+# 构建自定义镜像
+docker build -f Dockerfile -t docker-demo:v1.0.0 .
 # 参数说明: 
+# -f : 表示指定 Dockerfile
 # -t : 表示给镜像起名字，依旧遵循 repository:tag 的格式
 #  . : 是指定 Dockerfile 所在的目录，. 表示当前目录
+
+# 运行容器
+docker run -d --name docker-demo -p 8080:8080 docker-demo:v1.0.0
 ```
 
 

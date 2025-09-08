@@ -5,44 +5,44 @@ export const sidebar = {
       items: [
         {
           text: "基础使用",
-          link: "/frontend/CSS/基础使用.md"
+          link: "/frontend/CSS/基础使用.md",
         },
         {
           text: "Less",
-          link: "/frontend/CSS/Less.md"
+          link: "/frontend/CSS/Less.md",
         },
         {
           text: "Scss",
-          link: "/frontend/CSS/Scss.md"
-        }
-      ]
+          link: "/frontend/CSS/Scss.md",
+        },
+      ],
     },
     {
       text: "样式布局",
       items: [
         {
           text: "Flex布局",
-          link: "/frontend/CSS/flex布局.md"
+          link: "/frontend/CSS/flex布局.md",
         },
         {
           text: "Grid布局",
-          link: "/frontend/CSS/grid布局.md"
-        }
-      ]
+          link: "/frontend/CSS/grid布局.md",
+        },
+      ],
     },
     {
       text: "原子化CSS",
       items: [
         {
           text: "TailwindCSS",
-          link: "/frontend/CSS/TailwindCSS.md"
+          link: "/frontend/CSS/TailwindCSS.md",
         },
         {
           text: "UnoCSS",
-          link: "/frontend/CSS/UnoCSS.md"
-        }
-      ]
-    }
+          link: "/frontend/CSS/UnoCSS.md",
+        },
+      ],
+    },
   ],
 
   "/frontend/Gits/": [
@@ -51,14 +51,14 @@ export const sidebar = {
       items: [
         {
           text: "Git分支",
-          link: "/frontend/Gits/分支分类.md"
+          link: "/frontend/Gits/分支分类.md",
         },
         {
           text: "Git代理",
-          link: "/frontend/Gits/Git代理.md"
-        }
-      ]
-    }
+          link: "/frontend/Gits/Git代理.md",
+        },
+      ],
+    },
   ],
 
   "/frontend/MicroFrontend/": [
@@ -67,46 +67,46 @@ export const sidebar = {
       items: [
         {
           text: "iframe",
-          link: "/frontend/MicroFrontend/iframe.md"
-        }
-      ]
+          link: "/frontend/MicroFrontend/iframe.md",
+        },
+      ],
     },
     {
       text: "单页面应用",
       items: [
         {
           text: "single-spa",
-          link: "/frontend/MicroFrontend/single-spa.md"
-        }
-      ]
+          link: "/frontend/MicroFrontend/single-spa.md",
+        },
+      ],
     },
     {
       text: "乾坤",
       items: [
         {
           text: "乾坤微前端",
-          link: "/frontend/MicroFrontend/qiankun.md"
-        }
-      ]
+          link: "/frontend/MicroFrontend/qiankun.md",
+        },
+      ],
     },
     {
       text: "无界",
       items: [
         {
           text: "无界微前端",
-          link: "/frontend/MicroFrontend/wujie.md"
-        }
-      ]
+          link: "/frontend/MicroFrontend/wujie.md",
+        },
+      ],
     },
     {
       text: "garfish",
       items: [
         {
           text: "garfish微前端",
-          link: "/frontend/MicroFrontend/garfish.md"
-        }
-      ]
-    }
+          link: "/frontend/MicroFrontend/garfish.md",
+        },
+      ],
+    },
   ],
 
   "/backend/Java/Spring": [
@@ -115,7 +115,7 @@ export const sidebar = {
       items: [
         {
           text: "Spring简介",
-          link: "/backend/Java/Spring/Spring简介.md"
+          link: "/backend/Java/Spring/Spring简介.md",
         },
         {
           text: "IoC模块",
@@ -123,13 +123,13 @@ export const sidebar = {
           items: [
             {
               text: "基于XML注入Bean",
-              link: "/backend/Java/Spring/基于XML注入Bean.md"
+              link: "/backend/Java/Spring/基于XML注入Bean.md",
             },
             {
               text: "基于注解注入Bean",
-              link: "/backend/Java/Spring/基于注解注入Bean.md"
-            }
-          ]
+              link: "/backend/Java/Spring/基于注解注入Bean.md",
+            },
+          ],
         },
         {
           text: "手写依赖注入",
@@ -137,44 +137,44 @@ export const sidebar = {
           items: [
             {
               text: "回顾反射",
-              link: "/backend/Java/Spring/回顾反射.md"
+              link: "/backend/Java/Spring/回顾反射.md",
             },
             {
               text: "实现依赖注入",
-              link: "/backend/Java/Spring/实现依赖注入.md"
-            }
-          ]
+              link: "/backend/Java/Spring/实现依赖注入.md",
+            },
+          ],
         },
         {
           text: "AOP",
-          link: "/backend/Java/Spring/AOP.md"
+          link: "/backend/Java/Spring/AOP.md",
         },
         {
           text: "单元测试",
-          link: "/backend/Java/Spring/单元测试.md"
+          link: "/backend/Java/Spring/单元测试.md",
         },
         {
           text: "JdbcTemplate",
-          link: "/backend/Java/Spring/JdbcTemplate.md"
+          link: "/backend/Java/Spring/JdbcTemplate.md",
         },
         {
           text: "声明性事务",
-          link: "/backend/Java/Spring/声明性事务.md"
+          link: "/backend/Java/Spring/声明性事务.md",
         },
         {
           text: "资源操作",
-          link: "/backend/Java/Spring/资源操作.md"
+          link: "/backend/Java/Spring/资源操作.md",
         },
         {
           text: "i18n国际化",
-          link: "/backend/Java/Spring/i18n国际化.md"
+          link: "/backend/Java/Spring/i18n国际化.md",
         },
         {
           text: "数据校验",
-          link: "/backend/Java/Spring/数据校验.md"
-        }
-      ]
-    }
+          link: "/backend/Java/Spring/数据校验.md",
+        },
+      ],
+    },
   ],
 
   "/backend/Java/SpringMVC/": [
@@ -183,46 +183,46 @@ export const sidebar = {
       items: [
         {
           text: "MVC理论基础",
-          link: "/backend/Java/SpringMVC/MVC理论基础.md"
+          link: "/backend/Java/SpringMVC/MVC理论基础.md",
         },
         {
           text: "项目搭建和环境配置",
-          link: "/backend/Java/SpringMVC/项目搭建和环境配置.md"
+          link: "/backend/Java/SpringMVC/项目搭建和环境配置.md",
         },
         {
           text: "RequestMapping注解",
-          link: "/backend/Java/SpringMVC/RequestMapping注解.md"
+          link: "/backend/Java/SpringMVC/RequestMapping注解.md",
         },
         {
           text: "获取请求参数",
-          link: "/backend/Java/SpringMVC/获取请求参数.md"
+          link: "/backend/Java/SpringMVC/获取请求参数.md",
         },
         {
           text: "域对象共享数据",
-          link: "/backend/Java/SpringMVC/域对象共享数据.md"
+          link: "/backend/Java/SpringMVC/域对象共享数据.md",
         },
         {
           text: "RestFul风格",
-          link: "/backend/Java/SpringMVC/Restful风格.md"
+          link: "/backend/Java/SpringMVC/Restful风格.md",
         },
         {
           text: "HttpMessageConverter",
-          link: "/backend/Java/SpringMVC/HttpMessageConverter.md"
+          link: "/backend/Java/SpringMVC/HttpMessageConverter.md",
         },
         {
           text: "文件上传和下载",
-          link: "/backend/Java/SpringMVC/文件上传和下载.md"
+          link: "/backend/Java/SpringMVC/文件上传和下载.md",
         },
         {
           text: "拦截器",
-          link: "/backend/Java/SpringMVC/拦截器.md"
+          link: "/backend/Java/SpringMVC/拦截器.md",
         },
         {
           text: "异常处理器",
-          link: "/backend/Java/SpringMVC/异常处理器.md"
-        }
-      ]
-    }
+          link: "/backend/Java/SpringMVC/异常处理器.md",
+        },
+      ],
+    },
   ],
 
   "/backend/Java/Mybatis/": [
@@ -231,42 +231,42 @@ export const sidebar = {
       items: [
         {
           text: "基础使用",
-          link: "/backend/Java/Mybatis/基础使用.md"
+          link: "/backend/Java/Mybatis/基础使用.md",
         },
         {
           text: "配置文件详解",
-          link: "/backend/Java/Mybatis/配置文件详解.md"
+          link: "/backend/Java/Mybatis/配置文件详解.md",
         },
         {
           text: "获取参数值",
-          link: "/backend/Java/Mybatis/获取参数值.md"
+          link: "/backend/Java/Mybatis/获取参数值.md",
         },
         {
           text: "查询操作",
-          link: "/backend/Java/Mybatis/查询操作.md"
+          link: "/backend/Java/Mybatis/查询操作.md",
         },
         {
           text: "增删改操作",
-          link: "/backend/Java/Mybatis/增删改操作.md"
+          link: "/backend/Java/Mybatis/增删改操作.md",
         },
         {
           text: "自定义映射",
-          link: "/backend/Java/Mybatis/自定义映射.md"
+          link: "/backend/Java/Mybatis/自定义映射.md",
         },
         {
           text: "动态SQL",
-          link: "/backend/Java/Mybatis/动态SQL.md"
+          link: "/backend/Java/Mybatis/动态SQL.md",
         },
         {
           text: "缓存",
-          link: "/backend/Java/Mybatis/缓存.md"
+          link: "/backend/Java/Mybatis/缓存.md",
         },
         {
           text: "分页插件",
-          link: "/backend/Java/Mybatis/分页插件.md"
-        }
-      ]
-    }
+          link: "/backend/Java/Mybatis/分页插件.md",
+        },
+      ],
+    },
   ],
 
   "/backend/Java/MybatisPlus/": [
@@ -275,46 +275,46 @@ export const sidebar = {
       items: [
         {
           text: "基础使用",
-          link: "/backend/Java/MybatisPlus/基础使用.md"
+          link: "/backend/Java/MybatisPlus/基础使用.md",
         },
         {
           text: "查询功能",
-          link: "/backend/Java/MybatisPlus/查询功能.md"
+          link: "/backend/Java/MybatisPlus/查询功能.md",
         },
         {
           text: "增删改功能",
-          link: "/backend/Java/MybatisPlus/增删改功能.md"
+          link: "/backend/Java/MybatisPlus/增删改功能.md",
         },
         {
           text: "Service 接口",
-          link: "/backend/Java/MybatisPlus/Service接口.md"
+          link: "/backend/Java/MybatisPlus/Service接口.md",
         },
         {
           text: "常用注解",
-          link: "/backend/Java/MybatisPlus/常用注解.md"
+          link: "/backend/Java/MybatisPlus/常用注解.md",
         },
         {
           text: "条件构造器",
-          link: "/backend/Java/MybatisPlus/条件构造器.md"
+          link: "/backend/Java/MybatisPlus/条件构造器.md",
         },
         {
           text: "自动映射枚举",
-          link: "/backend/Java/MybatisPlus/自动映射枚举.md"
+          link: "/backend/Java/MybatisPlus/自动映射枚举.md",
         },
         {
           text: "分页插件",
-          link: "/backend/Java/MybatisPlus/分页插件.md"
+          link: "/backend/Java/MybatisPlus/分页插件.md",
         },
         {
           text: "乐观锁插件",
-          link: "/backend/Java/MybatisPlus/乐观锁和悲观锁.md"
+          link: "/backend/Java/MybatisPlus/乐观锁和悲观锁.md",
         },
         {
           text: "代码生成器",
-          link: "/backend/Java/MybatisPlus/代码生成器.md"
-        }
-      ]
-    }
+          link: "/backend/Java/MybatisPlus/代码生成器.md",
+        },
+      ],
+    },
   ],
 
   "/backend/Java/SpringBoot/": [
@@ -323,26 +323,26 @@ export const sidebar = {
       items: [
         {
           text: "基础使用",
-          link: "/backend/Java/SpringBoot/基础使用.md"
+          link: "/backend/Java/SpringBoot/基础使用.md",
         },
         {
           text: "Bean注册与管理",
-          link: "/backend/Java/SpringBoot/Bean注册与管理.md"
+          link: "/backend/Java/SpringBoot/Bean注册与管理.md",
         },
         {
           text: "自动装配",
-          link: "/backend/Java/SpringBoot/自动装配.md"
+          link: "/backend/Java/SpringBoot/自动装配.md",
         },
         {
           text: "日志",
-          link: "/backend/Java/SpringBoot/日志.md"
+          link: "/backend/Java/SpringBoot/日志.md",
         },
         {
           text: "启动参数配置",
-          link: "/backend/Java/SpringBoot/启动参数配置.md"
-        }
-      ]
-    }
+          link: "/backend/Java/SpringBoot/启动参数配置.md",
+        },
+      ],
+    },
   ],
 
   "/gis/Cesium/": [
@@ -354,32 +354,36 @@ export const sidebar = {
         { text: "相机视角", link: "/gis/Cesium/飞行视角.md" },
         {
           text: "Entity实体",
-          items: [{ text: "实体绘制", link: "/gis/Cesium/实体绘制.md" }]
-        }
-      ]
-    }
+          items: [{ text: "实体绘制", link: "/gis/Cesium/实体绘制.md" }],
+        },
+      ],
+    },
   ],
 
   "/devops/docker/": [
     {
-      text:"安装教程",
-      link:"/devops/docker/Docker安装教程.md"
+      text: "安装教程",
+      link: "/devops/docker/Docker安装教程.md",
     },
     {
-      text: "镜像",
-      link: "/devops/docker/镜像.md"
+      text: "镜像与容器",
+      link: "/devops/docker/镜像与容器.md",
     },
     {
-      text:"基础入门",
-      link:"/devops/docker/基础入门.md"
+      text: "目录挂载",
+      link: "/devops/docker/目录挂载.md",
     },
     {
-      text:"Dockerfile",
-      link:"/devops/docker/Dockerfile语法.md"
-    }
+      text: "自定义网络",
+      link: "/devops/docker/自定义网络.md",
+    },
+    {
+      text: "Dockerfile",
+      link: "/devops/docker/Dockerfile.md",
+    },
   ],
 
-  "/devops/linux/":[
+  "/devops/linux/": [
     {
       text: "基础命令",
       items: [
@@ -389,7 +393,7 @@ export const sidebar = {
         // { text: "vim", link: "/operations/linux/vim.md" },
         // { text: "固定IP地址", link: "/operations/linux/固定IP地址.md" },
         // { text: "yum设置阿里源", link: "/operations/linux/yum设置阿里源.md" }
-      ]
+      ],
     },
-  ]
-}
+  ],
+};
