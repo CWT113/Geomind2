@@ -41,7 +41,7 @@ ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # 自定义标签
-LABEL author=Yibo Wang
+LABEL author=YiboWang
 
 # 拷贝 jar 包
 COPY docker-demo.jar /docker-demo.jar
@@ -78,7 +78,7 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 >
 > 如果要使用 `.` 时，jar 包和 Dockerfile 文件必须放在同一个目录下。
 
-```bash
+```bash {2}
 # 构建自定义镜像
 docker build -f Dockerfile -t docker-demo:v1.0.0 .
 # 参数说明: 
@@ -89,10 +89,3 @@ docker build -f Dockerfile -t docker-demo:v1.0.0 .
 # 运行容器
 docker run -d --name docker-demo -p 8080:8080 docker-demo:v1.0.0
 ```
-
-
-
-
-
-
-

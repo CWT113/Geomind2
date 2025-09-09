@@ -381,6 +381,10 @@ export const sidebar = {
       text: "Dockerfile",
       link: "/devops/docker/Dockerfile.md",
     },
+    {
+      text: "Docker Compose",
+      link: "/devops/docker/Docker Compose.md",
+    },
   ],
 
   "/devops/linux/": [
