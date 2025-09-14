@@ -349,13 +349,14 @@ export const sidebar = {
     {
       text: "基础篇",
       items: [
-        { text: "基础使用", link: "/gis/Cesium/基础使用.md" },
-        { text: "坐标系统", link: "/gis/Cesium/坐标系统.md" },
-        { text: "相机视角", link: "/gis/Cesium/飞行视角.md" },
-        {
-          text: "Entity实体",
-          items: [{ text: "实体绘制", link: "/gis/Cesium/实体绘制.md" }],
-        },
+        { text: "基础使用", link: "/gis/Cesium/1.基础使用.md" },
+        { text: "坐标系统", link: "/gis/Cesium/2.坐标系统.md" },
+        { text: "相机视角", link: "/gis/Cesium/3.相机视角.md" },
+        { text: "地图事件", link: "/gis/Cesium/4.地图事件.md" },
+        // {
+        //   text: "Entity实体",
+        //   items: [{ text: "实体绘制", link: "/gis/Cesium/实体绘制.md" }],
+        // },
       ],
     },
   ],
