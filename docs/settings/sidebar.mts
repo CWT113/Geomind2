@@ -353,10 +353,29 @@ export const sidebar = {
         { text: "坐标系统", link: "/gis/Cesium/2.坐标系统.md" },
         { text: "相机视角", link: "/gis/Cesium/3.相机视角.md" },
         { text: "地图事件", link: "/gis/Cesium/4.地图事件.md" },
-        // {
-        //   text: "Entity实体",
-        //   items: [{ text: "实体绘制", link: "/gis/Cesium/实体绘制.md" }],
-        // },
+        {
+          text: "三维数据",
+          link: "/gis/Cesium/5.三维数据.md",
+          items: [
+            { text: "影像数据加载", link: "/gis/Cesium/6.影像数据加载.md" },
+            { text: "地形数据加载", link: "/gis/Cesium/7.地形数据加载.md" },
+            { text: "矢量数据加载", link: "/gis/Cesium/8.矢量数据加载.md" },
+            { text: "三维模型加载", link: "/gis/Cesium/9.三维模型加载.md" },
+            { text: "三维瓦片加载", link: "/gis/Cesium/10.三维瓦片加载.md" },
+          ],
+        },
+        {
+          text: "Entity实体",
+          items: [
+            { text: "实体绘制", link: "/gis/Cesium/11.Entity实体.md" },
+            { text: "材质与轮廓", link: "/gis/Cesium/12.Entity材质与轮廓.md" },
+            { text: "实体管理", link: "/gis/Cesium/13.Entity管理.md" },
+            { text: "实体拾取", link: "/gis/Cesium/14.Entity拾取.md" },
+          ],
+        },
+        { text: "Primitive图元", link: "/gis/Cesium/15.Primitive图元.md" },
+        { text: "组件重写", link: "/gis/Cesium/16.组件重写.md" },
+        { text: "地图导出", link: "/gis/Cesium/17.地图导出.md" },
       ],
     },
   ],
