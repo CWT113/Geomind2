@@ -380,6 +380,8 @@ export const sidebar = {
     },
   ],
 
+  "/gis/WebGL/": [{ text: "基础使用", link: "/gis/WebGL/1.基础使用.md" }],
+
   "/devops/docker/": [
     {
       text: "安装教程",
