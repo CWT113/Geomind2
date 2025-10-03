@@ -389,7 +389,7 @@ export const sidebar = {
     },
   ],
 
-  "/gis/WebGL/": [{text: "基础使用", link: "/gis/WebGL/1.基础使用.md"}],
+  "/gis/WebGL/": [{text: "什么是WebGL", link: "/gis/WebGL/1.什么是WebGL.md"}],
 
   "/devops/docker/": [
     {
