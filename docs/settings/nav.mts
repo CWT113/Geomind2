@@ -32,7 +32,7 @@ export const nav = [
     items: [
       {
         text: "Vue3",
-        link: "/a.md",
+        link: "/frontend/Vue/1.类型标注.md",
       },
       {
         text: "Pinia",
