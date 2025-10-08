@@ -112,7 +112,7 @@ export const sidebar = {
   "/frontend/Vue/": [
     {
       text: "基础知识",
-      items: [{ text: "类型标注", link: "/frontend/Vue/1.类型标注.md" }],
+      items: [{text: "类型标注", link: "/frontend/Vue/1.类型标注.md"}],
     },
   ],
 
@@ -356,40 +356,41 @@ export const sidebar = {
     {
       text: "基础篇",
       items: [
-        { text: "基础使用", link: "/gis/Cesium/1.基础使用.md" },
-        { text: "坐标系统", link: "/gis/Cesium/2.坐标系统.md" },
-        { text: "相机视角", link: "/gis/Cesium/3.相机视角.md" },
-        { text: "地图事件", link: "/gis/Cesium/4.地图事件.md" },
+        {text: "基础使用", link: "/gis/Cesium/1.基础使用.md"},
+        {text: "坐标系统", link: "/gis/Cesium/2.坐标系统.md"},
+        {text: "相机视角", link: "/gis/Cesium/3.相机视角.md"},
+        {text: "地图事件", link: "/gis/Cesium/4.地图事件.md"},
         {
           text: "三维数据",
           link: "/gis/Cesium/5.三维数据.md",
           items: [
-            { text: "影像数据加载", link: "/gis/Cesium/6.影像数据加载.md" },
-            { text: "地形数据加载", link: "/gis/Cesium/7.地形数据加载.md" },
-            { text: "矢量数据加载", link: "/gis/Cesium/8.矢量数据加载.md" },
-            { text: "三维模型加载", link: "/gis/Cesium/9.三维模型加载.md" },
-            { text: "三维瓦片加载", link: "/gis/Cesium/10.三维瓦片加载.md" },
+            {text: "影像数据加载", link: "/gis/Cesium/6.影像数据加载.md"},
+            {text: "地形数据加载", link: "/gis/Cesium/7.地形数据加载.md"},
+            {text: "矢量数据加载", link: "/gis/Cesium/8.矢量数据加载.md"},
+            {text: "三维模型加载", link: "/gis/Cesium/9.三维模型加载.md"},
+            {text: "三维瓦片加载", link: "/gis/Cesium/10.三维瓦片加载.md"},
           ],
         },
         {
           text: "Entity实体",
           items: [
-            { text: "实体绘制", link: "/gis/Cesium/11.Entity实体.md" },
-            { text: "材质与轮廓", link: "/gis/Cesium/12.Entity材质与轮廓.md" },
-            { text: "实体管理", link: "/gis/Cesium/13.Entity管理.md" },
-            { text: "实体拾取", link: "/gis/Cesium/14.Entity拾取.md" },
+            {text: "实体绘制", link: "/gis/Cesium/11.Entity实体.md"},
+            {text: "材质与轮廓", link: "/gis/Cesium/12.Entity材质与轮廓.md"},
+            {text: "实体管理", link: "/gis/Cesium/13.Entity管理.md"},
+            {text: "实体拾取", link: "/gis/Cesium/14.Entity拾取.md"},
           ],
         },
-        { text: "Primitive图元", link: "/gis/Cesium/15.Primitive图元.md" },
-        { text: "组件重写", link: "/gis/Cesium/16.组件重写.md" },
-        { text: "地图导出", link: "/gis/Cesium/17.地图导出.md" },
+        {text: "Primitive图元", link: "/gis/Cesium/15.Primitive图元.md"},
+        {text: "组件重写", link: "/gis/Cesium/16.组件重写.md"},
+        {text: "地图导出", link: "/gis/Cesium/17.地图导出.md"},
       ],
     },
   ],
 
   "/gis/WebGL/": [
-    { text: "基础概念", link: "/gis/WebGL/1.基础概念.md" },
-    { text: "着色器", link: "/gis/WebGL/2.着色器.md" },
+    {text: "基础概念", link: "/gis/WebGL/1.基础概念.md"},
+    {text: "canvas基础", link: "/gis/WebGL/2.canvas基础.md"},
+    {text: "着色器", link: "/gis/WebGL/3.着色器.md"},
   ],
 
   "/devops/docker/": [
@@ -423,7 +424,7 @@ export const sidebar = {
     {
       text: "基础命令",
       items: [
-        { text: "系统命令", link: "/devops/linux/系统命令.md" },
+        {text: "系统命令", link: "/devops/linux/系统命令.md"},
         // { text: "常用命令", link: "/operations/linux/常用命令.md" },
         // { text: "用户和权限", link: "/operations/linux/用户和权限.md" },
         // { text: "vim", link: "/operations/linux/vim.md" },
