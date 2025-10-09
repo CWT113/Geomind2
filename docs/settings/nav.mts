@@ -104,7 +104,7 @@ export const nav = [
         items: [
           {
             text: "WebGL",
-            link: "/gis/WebGL/1.基础概念.md",
+            link: "/gis/WebGL/1.WebGL概述.md",
           },
         ],
       },
