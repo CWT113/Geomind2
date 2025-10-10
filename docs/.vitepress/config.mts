@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
 import { nav } from "../settings/nav.mts";
+import mathjax3 from 'markdown-it-mathjax3';
 import { search } from "../settings/search.mts";
 import { footer } from "../settings/footer.mts";
 import { sidebar } from "../settings/sidebar.mts";
@@ -9,6 +10,7 @@ import {
   groupIconMdPlugin,
   groupIconVitePlugin,
 } from "vitepress-plugin-group-icons";
+
 
 export default defineConfig({
   base: "/Geomind2/",
@@ -57,6 +59,7 @@ export default defineConfig({
     config: async (md) => {
       md.use(groupIconMdPlugin); //代码组图标
       md.use(MermaidMarkdown); // mermaid流程图
+      md.use(mathjax3);
 
       md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
         let htmlResult = slf.renderToken(tokens, idx, options);
