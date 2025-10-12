@@ -163,3 +163,8 @@ table {
 ul li {
   font-size: 15px;
 }
+
+/* MathJax数学公式避免出现Y轴滚动条 */
+.MathJax {
+  overflow: hidden !important;
+}
