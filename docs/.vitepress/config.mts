@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 import { nav } from "../settings/nav.mts";
-import mathjax3 from 'markdown-it-mathjax3';
+import mathjax3 from "markdown-it-mathjax3";
 import { search } from "../settings/search.mts";
 import { footer } from "../settings/footer.mts";
 import { sidebar } from "../settings/sidebar.mts";
@@ -11,7 +11,6 @@ import {
   groupIconVitePlugin,
 } from "vitepress-plugin-group-icons";
 
-
 export default defineConfig({
   base: "/Geomind2/",
   lang: "zh-CN",
@@ -20,7 +19,15 @@ export default defineConfig({
   cleanUrls: true,
   appearance: true,
   ignoreDeadLinks: false,
-  head: [["link", {rel: "icon", href: "/Geomind2/butterfly-logo.png"}]],
+  head: [
+    [
+      "link",
+      {
+        rel: "icon",
+        href: "/Geomind2/butterfly-logo.png",
+      },
+    ],
+  ],
 
   // 站点地图
   sitemap: {
@@ -50,8 +57,8 @@ export default defineConfig({
     math: true,
     lineNumbers: true,
     theme: {
-      light: "github-light",
-      dark: "one-dark-pro",
+      light: "one-light",
+      dark: "tokyo-night",
     },
     image: {
       lazyLoading: true,
@@ -76,7 +83,7 @@ export default defineConfig({
             const info = token.info.trim().slice(type.length).trim();
 
             if (token.nesting === 1) {
-              const title = info || "SUCCESS";
+              const title = info || type.toUpperCase();
               return `<div class="custom-block ${type}"><p class="custom-block-title">${title}</p>\n`;
             } else {
               return "</div>\n";
@@ -88,7 +95,6 @@ export default defineConfig({
   },
 
   themeConfig: {
-    outlineTitle: "目录",
     sidebarMenuLabel: "目录",
     returnToTopLabel: "返回顶部",
     logo: "/badminton-logo.png",

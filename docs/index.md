@@ -62,6 +62,3 @@ features:
 
 <!-- 标题下面的美化图标 -->
 <HomeUnderline />
-
-<!-- 五彩纸屑 -->
-<Confetti />

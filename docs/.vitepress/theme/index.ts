@@ -35,7 +35,7 @@ export default {
 
     return h(DefaultTheme.Layout, props, {
       "doc-footer-before": () => h(BackToTop),
-      "layout-top": () => h(Fragment, null, [h(MouseClick), h(MouseFollower)])
+      // "layout-top": () => h(Fragment, null, [h(MouseClick), h(MouseFollower)])
     })
   },
 

@@ -21,6 +21,7 @@
     "@theojs/lumen": "^5.4.2",
     "@types/animejs": "^3.1.13",
     "animejs": "3.2.2",
+    "canvas-confetti": "^1.9.3",
     "busuanzi.pure.js": "^1.0.3",
     "markdown-it-container": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",

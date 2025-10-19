@@ -1,5 +1,5 @@
 export const nav = [
-  { text: "导航", link: "/navigation/index.md" },
+  { text: "编程导航", link: "/navigation/index.md" },
 
   {
     text: "前端",
@@ -16,14 +16,6 @@ export const nav = [
         text: "TypeScript",
         link: "/a.md",
       },
-      {
-        text: "Node.js",
-        link: "/a.md",
-      },
-      {
-        text: "Git",
-        link: "/frontend/Gits/分支分类.md",
-      },
     ],
   },
 
@@ -31,16 +23,20 @@ export const nav = [
     text: "Vue",
     items: [
       {
-        text: "Vue3",
-        link: "/frontend/Vue/1.类型标注.md",
-      },
-      {
-        text: "Pinia",
-        link: "/a.md",
-      },
-      {
-        text: "打包构建",
+        text: "全家桶",
         items: [
+          {
+            text: "Vue3",
+            link: "/frontend/Vue/1.类型标注.md",
+          },
+          {
+            text: "Pinia",
+            link: "/a.md",
+          },
+          {
+            text: "Vue Router",
+            link: "/a.md",
+          },
           {
             text: "Vite",
             link: "/a.md",
@@ -62,28 +58,114 @@ export const nav = [
       },
       {
         text: "微前端",
-        link: "/frontend/MicroFrontend/qiankun.md",
+        items: [
+          {
+            text: "微前端",
+            link: "/frontend/MicroFrontend/qiankun.md",
+          },
+        ],
       },
     ],
   },
 
   {
+    text: "React",
+    link: "/a.md",
+  },
+
+  {
     text: "Java",
     items: [
-      // { text: "JDBC", link: "" },
       {
-        text: "SSM",
+        text: "基础知识",
         items: [
-          { text: "Spring", link: "/backend/Java/Spring/Spring简介.md" },
-          { text: "SpringMVC", link: "/backend/Java/SpringMVC/MVC理论基础.md" },
-          { text: "MyBatis", link: "/backend/Java/Mybatis/基础使用.md" },
           {
-            text: "MyBatisPlus",
+            text: "Java基础",
+            link: "/a.md",
+          },
+          {
+            text: "JDBC",
+            link: "/a.md",
+          },
+          {
+            text: "Java Web",
+            link: "/a.md",
+          },
+          {
+            text: "Maven",
+            link: "/a.md",
+          },
+        ],
+      },
+      {
+        text: "Spring全家桶",
+        items: [
+          {
+            text: "Spring6",
+            link: "/backend/Java/Spring/Spring简介.md",
+          },
+          {
+            text: "Spring MVC",
+            link: "/backend/Java/SpringMVC/MVC理论基础.md",
+          },
+          {
+            text: "Spring Boot",
+            link: "/backend/Java/SpringBoot/基础使用.md",
+          },
+          {
+            text: "MyBatis",
+            link: "/backend/Java/Mybatis/基础使用.md",
+          },
+          {
+            text: "MyBatis Plus",
             link: "/backend/Java/MybatisPlus/基础使用.md",
           },
         ],
       },
-      { text: "SpringBoot", link: "/backend/Java/SpringBoot/基础使用.md" },
+      {
+        text: "高级调优",
+        items: [
+          {
+            text: "JVM",
+            link: "/a.md",
+          },
+          {
+            text: "JUC",
+            link: "/a.md",
+          },
+        ],
+      },
+      {
+        text: "中间件",
+        items: [
+          {
+            text: "Kafka",
+            link: "/a.md",
+          },
+          {
+            text: "RabbitMQ",
+            link: "/a.md",
+          },
+          {
+            text: "Redis",
+            link: "/a.md",
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    text: "数据库",
+    items: [
+      {
+        text: "MySQL",
+        link: "/a.md",
+      },
+      {
+        text: "PostgreSQL",
+        link: "/a.md",
+      },
     ],
   },
 
@@ -91,59 +173,80 @@ export const nav = [
     text: "GIS",
     items: [
       {
+        text: "理论知识",
+        items: [
+          {
+            text: "基础理论",
+            link: "/a.md",
+          },
+        ],
+      },
+      {
+        text: "二维地图",
+        items: [
+          {
+            text: "Mapbox",
+            link: "/a.md",
+          },
+          {
+            text: "Open layers",
+            link: "/a.md",
+          },
+        ],
+      },
+      {
         text: "三维地图",
         items: [
           {
             text: "Cesium",
             link: "/gis/Cesium/1.基础使用.md",
           },
+          {
+            text: "Mars3d",
+            link: "/a.md",
+          },
         ],
       },
       {
-        text: "浏览器渲染",
+        text: "图形化渲染",
         items: [
           {
             text: "WebGL",
             link: "/gis/WebGL/1.WebGL概述.md",
+          },
+          {
+            text: "ThreeJS",
+            link: "/a.md",
+          },
+        ],
+      },
+      {
+        text: "服务托管",
+        items: [
+          {
+            text: "GeoServer",
+            link: "/a.md",
           },
         ],
       },
     ],
   },
 
-  // {
-  //   text: "数据库",
-  //   items: [
-  //     {
-  //       text: "MySQL",
-  //       link: "/a.md"
-  //     },
-  //     {
-  //       text: "PostgreSQL",
-  //       link: "/a.md"
-  //     }
-  //   ]
-  // },
-
   {
     text: "服务端",
     items: [
+      {
+        text: "Nginx",
+        link: "/a.md",
+      },
       {
         text: "Linux",
         link: "/devops/linux/系统命令.md",
       },
       {
-        text: "Nginx",
-        link: "/a.md"
-      },
-      {
         text: "Docker",
         link: "/devops/docker/镜像与容器.md",
       },
-      {
-        text: "K8s",
-        link: "/a.md"
-      }
     ],
   },
 
