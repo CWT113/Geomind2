@@ -116,6 +116,29 @@ export const sidebar = {
     },
   ],
 
+  "/backend/Java/DataStructure": [
+    {
+      text: "基础数据结构篇",
+      collapsed: true,
+      items: [
+        {
+          text: "初识算法",
+          link: "/backend/Java/DataStructure/初识算法.md",
+        },
+      ],
+    },
+    {
+      text: "基础算法篇",
+      collapsed: true,
+      items: [],
+    },
+    {
+      text: "进阶篇",
+      collapsed: true,
+      items: [],
+    },
+  ],
+
   "/backend/Java/Spring": [
     {
       text: "Spring6",

@@ -84,6 +84,10 @@ export const nav = [
             link: "/a.md",
           },
           {
+            text: "数据结构和算法",
+            link: "/backend/Java/DataStructure/初识算法.md",
+          },
+          {
             text: "JDBC",
             link: "/a.md",
           },

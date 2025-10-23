@@ -6,7 +6,7 @@
 /* 右侧目录样式 */
 @import url(./catalog.css);
 /* 自定义高亮块样式 */
-@import url(./custom-block.css);
+/*@import url(./custom-block.css);*/
 /* 顶部栏玻璃透明样式 */
 @import url(./blur.css);
 /* Logo等位置隐藏下划线样式 */
