@@ -45,6 +45,13 @@ export const sidebar = {
     },
   ],
 
+  "/frontend/Javascript/": [
+    {
+      text: "基础使用",
+      items: "/frontend/Javascript/基础使用.md",
+    },
+  ],
+
   "/frontend/Gits/": [
     {
       text: "Git",

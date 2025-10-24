@@ -10,7 +10,7 @@ export const nav = [
       },
       {
         text: "JavaScript",
-        link: "/a.md",
+        link: "/frontend/Javascript/基础使用.md",
       },
       {
         text: "TypeScript",
